@@ -4,12 +4,63 @@
     margin: 0;
 }
 
-/*****NAVBAR*****/
+/*****HEADER*****/
 
 .navbar {
     border: 1px solid rgb(225, 226, 235);
+    padding: 0;
+    position: relative;
 }
 
 .offcanvas {
-    width: 300px !important; /*Para que al abrir el menu en responsive no ocupe todo el ancho*/
+    width: 330px !important; /*Para que al abrir el menu en responsive no ocupe todo el ancho*/
+}
+
+.logo-clinica {
+    width: 150px;
+}
+
+/*****FIN HEADER*****/
+
+/*****MAIN*****/
+
+.juanMain {
+    padding: 10px 0;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Libre Franklin", sans-serif;
+    text-align: center;
+    gap: 20px;
+}
+
+.contenedorNosotros {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloNosotros {
+    color: #213857;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.spanTitulo {
+    color: #86ac41;
+}
+
+.spanSaludo {
+    color: rgba(128, 128, 128, 0.827);
+}
+
+.descripcionNosotros {
+    margin: 10px 0;
+    background-color: #7da3a1;
+    padding: 15px 30px;
+    color: white;
+    font-size: 19px;
 }
