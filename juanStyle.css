@@ -27,7 +27,7 @@
 .juanMain {
     padding: 10px 0;
     width: 100%;
-    margin: 40px auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,6 +35,28 @@
     font-family: "Libre Franklin", sans-serif;
     text-align: center;
     gap: 20px;
+}
+
+.contenedorWhatsapp {
+    background-color: #0df053;
+    position: fixed;
+    bottom: 20px;
+    right: 10px; 
+    width: 55px; 
+    height: 55px; 
+    cursor: pointer; 
+    z-index: 1000; 
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+.whatsapp-icon {
+    color: white;
 }
 
 .contenedorNosotros {
@@ -59,8 +81,36 @@
 
 .descripcionNosotros {
     margin: 10px 0;
-    background-color: #7da3a1;
+    background: #448678;
     padding: 15px 30px;
     color: white;
     font-size: 19px;
+    line-height: 1.8;
+}
+
+/*****CARDS*****/
+
+.contenedorCards {
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 0 12px 24px 1px #d4e0ec;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.card-title {
+    font-weight: bold;
 }

@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="juanStyle.css">
 </head>
 <body>
     <header class="juanHeader">
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img class="logo-clinica" src="logo-clinica.jpeg" alt="logo de la clinica"></a>
+              <a class="navbar-brand" href="#"><img class="logo-clinica" src="img/logo-clinica.jpeg" alt="logo de la clinica"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -52,6 +53,12 @@
     </header>
     <main class="juanMain">
         <div class="contenedorNosotros">
+          <div class="contenedorWhatsapp"><a
+            class="whatsapp-icon"
+            href="https://wa.me/+5493814955080?text=Hola%20buenas,%20tengo%20una%20consulta."
+            target="_blank"
+            ><i class="bi bi-whatsapp"></i
+          ></a></div>
             <h1 class="tituloNosotros"><span class="spanTitulo">Sobre</span> nosotros</h1>
             <span class="spanSaludo">¡Saludos desde nuestro equipo!</span>
             <span class="descripcionNosotros">Somos un grupo de cuatro estudiantes que compartimos una pasión por la programación, para trabajar juntos en nuestro segundo proyecto, donde buscamos explorar nuevas ideas y desafíos.</span>
@@ -59,6 +66,46 @@
         <div class="contenedorNosotros">
             <h1 class="tituloNosotros"><span class="spanTitulo">Nuestra</span> meta</h1>
             <span class="descripcionNosotros bg-blanco">Como estudiantes de programación, aspiramos a crear soluciones innovadoras que mejoren la vida de las personas y dejen una marca positiva en el mundo.</span>
+        </div>
+        <div class="contenedorCards">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="img/card1.jpg" class="card-img-top" alt="Foto Juan Diaz">
+                    <div class="card-body">
+                      <h5 class="card-title">Juan Gabriel Diaz</h5>
+                      <p class="card-text">Apasionado por la programación, enfocado en el desarrollo web y a futuro me gustaria centrarme en el desarrollo de aplicaciones.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="img/card2.jpg" class="card-img-top" alt="Foto Heyme Coraspe">
+                    <div class="card-body">
+                      <h5 class="card-title">Heyme Coraspe</h5>
+                      <p class="card-text">Amante del aprendizaje continuo y la resolución de problemas, especializado en el análisis de datos y la implementación de soluciones eficientes.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="img/card3.jpg" class="card-img-top" alt="Foto Antonio Gutierrez">
+                    <div class="card-body">
+                      <h5 class="card-title">Antonio Gutierrez</h5>
+                      <p class="card-text">Creativo y comprometido, con experiencia en proyectos de software y una pasión por la colaboración en equipo para alcanzar objetivos ambiciosos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="img/card4.jpg" class="card-img-top" alt="Foto Fabian Martin">
+                    <div class="card-body">
+                      <h5 class="card-title">Fabián Martín</h5>
+                      <p class="card-text">Entusiasta del mundo tecnologico, siempre en búsqueda de nuevos desafíos y oportunidades para crecer en el campo de la tecnología.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div> 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
