@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    background-color: rgb(241, 235, 235);
+    font-family: "Roboto Condensed", sans-serif;
+}
+header{
+    background-color: #324851;
+    height: 15vh;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #86ac41;
+    font-size: 7vh;
+    text-align: center;
+    padding-top: 3vh;
+    text-align: left;
+    padding-left: 5vh;
+}
+
+.container-fluid{
+    background-color: #34675c;
+    color: silver;
+    margin-top: 0%;
+}
+
+navbar-collapse{
+    display: flex;
+    justify-content: space-between;
+}
+
+.clinica{
+    text-align: left;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tu-salud{
+    text-align: right;
+    margin-top: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    padding-right: 3vh;
+    padding-top: 3vh;
+}
+.navbar{
+    padding: 0;
+}
+
+img{
+    width: 25VH;
+}
+
+.tit-form-paciente{
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 0;
+    font-size: 9vh;
+    color: #324851;
+}
+
+.form-column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.form-container{
+    display: grid;
+}
+
+.registro-paciente-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #447168;
+    border-radius: 8vh;
+}
+
+label{
+    font-size: 5vh;
+    font-weight: 400;
+}
+
+.btn-registro-paciente{
+    border-radius: 2VH;
+    background-color: #86ac41;
+    color: #34675c;
+    width:20vh;
+    height: 6vh;
+    font-size: 3vh;
+    display: grid;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    margin-left: 30vh;
+}
+
+.btn-registro-paciente:hover{
+    color:rgb(241, 235, 235);
+    scale: 1.1;
+}
+
+/*media queries*/
+
+@media (max-width: 480px) {
+    .clinica{
+        font-size: 4vh;
+    }
+    h5{
+        visibility: hidden;
+    }
+}
