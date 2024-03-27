@@ -55,7 +55,7 @@
     color: white;
 }
 
-.whatsapp-icon {
+.whatsappLogo {
     color: white;
 }
 
@@ -91,6 +91,10 @@
 /*****CARDS*****/
 
 .contenedorCards {
+    width: 100%;
+}
+
+.col-sm-3 {
     width: 80%;
     margin: auto;
 }
@@ -102,6 +106,8 @@
     align-items: center;
     border: none;
     box-shadow: 0 12px 24px 1px #d4e0ec;
+    width: 100%;
+    margin: auto;
 }
 
 .card img {
