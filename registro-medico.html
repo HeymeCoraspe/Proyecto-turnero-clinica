@@ -16,114 +16,99 @@
     <title>Clínica Dr. Chapatín- Registro médicos</title>
 </head>
 <body>
-    <header>
-        <div class="clinica">Clínica Dr. Chapatín</div>
-        <div class="tu-salud"><h5>Tu salud es nuestra prioridad</h5></div>
-    </header>
-    
-    <nav class="navbar navbar-expand-lg bg-NAV">
-        
+  <header class="juanHeader">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="error.html">
-            <img
-              src="images/Green Blue Minimalist Modern Medical Clinics Logo.png"
-              alt="Logos"
-            />
-          </a>
-          <button
-            class="navbar-toggler nav"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <a class="navbar-brand" href="#"><img class="logo-clinica" src="images/Green Blue Minimalist Modern Medical Clinics Logo.png" alt="logo de la clinica"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="medio d-flex justify-content-between">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item inicio">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="index.html"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item s-n">
-                  <a class="nav-link active" aria-current="page" href="nosotros.html" target="_blank"
-                    >Sobre Nosotros</a
-                  >
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link active "
-                    href="carrito.html"
-                    role="button"
-                    target="_blank"
-                    >Especialidades</a>
-    
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        
-    </nav>
+      </nav>
+</header>
 
-    <form action="#" method="post" class="registro-form">
+    <form action="#" method="post" class="registro-medico-form">
         <h1 style="text-align: center; color:#86ac41;" >Registro de médicos <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-clipboard-heart" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
             <path d="M3 1.5h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2"/>
             <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.31 8 6.982"/></h1>
 
-        <div class="form-container">
+            <form action="" class="registro-medico-form">
+              <div class="form-container">
+                      <label for="nombreApellido-medico">Nombre y Apellido</label>
+                      <input type="text" id="nombreApellidoMedico" name="nombreApellido" required placeholder="Nombre Completo"><br>
+  
+                      <label for="dni">DNI</label>
+                      <input type="text" name="dni" id="dni" required placeholder="Número de dni sin puntos"><br>
+  
+                      <label for="fechaNac">Fecha de nacimiento</label>
+                      <input type="date" name="fechaNac" id="fechaNac" required><br>
+      
+                      <label for="email">Dirección de Email</label>
+                      <input type="email" id="emai-medico" name="email" required placeholder="Mail"><br>
+      
+                      <label for="telefonoMedico">Teléfono</label>
+                      <input type="tel" id="telefono-medico" name="telefono" required placeholder="Télefono con característica y sin el 15"><br>
+  
+                      <label for="direccionmedico">Dirección</label>
+                      <input type="text" id="Dirección-medico" name="direccion" required placeholder="Calle, altura, barrio, ciudad"><br>
 
-            <div class="form-column">
-                <label for="nombreApellido-medico">Nombre y Apellido</label>
-                <input type="text" id="nombreApellido-medico" name="nombreApellido-medico" required placeholder="nombre completo"><br>
-                
-                <br> <label for="colegiado">Registro de colegiado</label>
-                <input type="text" id="colegiado" name="colegiado" required placeholder="sin puntos ni guiones"><br>
-
-                <br> <label for="email-medico">Dirección de Email</label>
-                <input type="email-medico" id="email-medico" name="email-medico" required placeholder="email"><br>
-
-                <br><label for="telefono-medico">Teléfono</label>
-                <input type="tel-medico" id="telefono-medico" name="telefono-medico" required placeholder="con característica sin 15"><br>
-            </div>
-
-            <div class="form-column">
-                <label for="domicilio-medico">Domicilio</label>
-                <input type="text" id="domicilio-medico" name="domicilio-medico" required placeholder="calle, altura, barrio, ciudad"><br>
-                 
-                <br><label for="fechaNacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br>
-
-                <br><label for="especialidad-medico">Especialidad médica</label>
-                <select name="especialidad-medico" id="especialidad-medico">
-                    <option value="nada">-</option>
-                    <option value="cardiologia">Cardiología</option>
-                    <option value="dermatologia">Dermatología</option>
-                    <option value="general">General</option>
-                    <option value="Ginecologia">Ginecología</option>
-                    <option value="oftalmologia">Oftalmología</option>
-                    <option value="traumatología">Traumatología</option>
-                </select><br>
-
-                <br><label for="contrasena">Contraseña</label>
-                <input type="password" id="contrasena" name="contrasena" required placeholder="letras, números, un caracter"><br>
-            </div>
-
-          </div>
-          <br>
-
-          <div id="summit-registro-medico" style=" position: relative">
-            <button class="btn-registro-medico">Regristrarse</button><br>
-        </div>
-    </form>
-
+                      <label for="numerocolegiado">Número de colegiado</label>
+                      <input type="text" name="numerocolegiado" id="número-colegiado" required placeholder="Ingrese número sin puntos ni guiones"><br>
+  
+                      <label for="especialidad">Especialidad</label>
+                      <select name="especialidad" id="especialidad-medico">
+                        <option value="nada">-</option>
+                          <option value="alergologo">Alergólogo</option>
+                          <option value="cardiologo">Cardiología</option>
+                          <option value="dermatologia">Dermatología</option>
+                          <option value="fonoaudiologia">Fonoaudiología</option>
+                          <option value="gastroenterologia">Gastroenterología</option>
+                      </select><br>
+                      
+                      <div class="col 2">
+                        <label for="disponibilidad">Disponibilidad</label><br>
+                        <input type="radio" required id="check-mañana"> <label for="mañana" class="disponibilidad">Mañana</label>
+                        <input type="radio" required id="check-tarde"> <label for="mañana"class="disponibilidad" >Tarde</label>
+                      </div> <br>
+                      <label for="contraseña-medico">Contraseña</label>
+                      <input type="text" name="contraseña-medico" required placeholder="Al menos una letra, un número y un caracter especial"><br>
+                     
+                      <div id="summit-registro-medico" style=" position: relative">
+                          <button class="summit-registro-medico">Regristrarse</button><br>
+                      </div>
+                      
+              </div>
+          </form>
    
 </body>
 </html>

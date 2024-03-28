@@ -3,52 +3,24 @@ body{
     background-color: rgb(241, 235, 235);
     font-family: "Roboto Condensed", sans-serif;
 }
-header{
-    background-color: #324851;
-    height: 15vh;
-    font-family: "Roboto Condensed", sans-serif;
-    color: #86ac41;
-    font-size: 7vh;
-    text-align: center;
-    padding-top: 3vh;
-    text-align: left;
-    padding-left: 5vh;
-}
+/*****HEADER*****/
 
-.container-fluid{
-    background-color: #34675c;
-    color: silver;
-    margin-top: 0%;
-}
-
-navbar-collapse{
-    display: flex;
-    justify-content: space-between;
-}
-
-.clinica{
-    text-align: left;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-}
-
-.tu-salud{
-    text-align: right;
-    margin-top: 0;
-    font-family: "Roboto Condensed", sans-serif;
-    padding-right: 3vh;
-    padding-top: 3vh;
-}
-.navbar{
+.navbar {
+    border: 1px solid rgb(225, 226, 235);
     padding: 0;
+    position: relative;
 }
 
-img{
-    width: 25VH;
+.offcanvas {
+    width: 330px !important; /*Para que al abrir el menu en responsive no ocupe todo el ancho*/
 }
+
+.logo-clinica {
+    width: 150px;
+}
+
+/*****FIN HEADER*****/
+
 
 .tit-form-paciente{
     text-align: center;
@@ -78,6 +50,9 @@ img{
 label{
     font-size: 5vh;
     font-weight: 400;
+}
+#id-contraseña-paciente{
+    width: 50vh;   
 }
 
 .btn-registro-paciente{

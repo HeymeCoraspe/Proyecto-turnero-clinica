@@ -3,67 +3,29 @@ body{
     background-color: rgb(241, 235, 235);
     font-family: "Roboto Condensed", sans-serif;
 }
-header{
-    background-color: #324851;
-    height: 15vh;
-    font-family: "Roboto Condensed", sans-serif;
-    color: #86ac41;
-    font-size: 7vh;
-    text-align: center;
-    padding-top: 3vh;
-    text-align: left;
-    padding-left: 5vh;
-}
+/*****HEADER*****/
 
-.container-fluid{
-    background-color: #34675c;
-    color: silver;
-    margin-top: 0%;
-}
-
-navbar-collapse{
-    display: flex;
-    justify-content: space-between;
-}
-
-.clinica{
-    text-align: left;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-}
-
-.tu-salud{
-    text-align: right;
-    margin-top: 0;
-    font-family: "Roboto Condensed", sans-serif;
-    padding-right: 3vh;
-    padding-top: 3vh;
-}
-.navbar{
+.navbar {
+    border: 1px solid rgb(225, 226, 235);
     padding: 0;
+    position: relative;
 }
 
-img{
-    width: 25VH;
+.offcanvas {
+    width: 330px !important; /*Para que al abrir el menu en responsive no ocupe todo el ancho*/
 }
 
-.registro-form {
-    max-width: 600px;
-    margin: 100px auto;
-    padding: 30px;
-    background: #34675c;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: "Roboto Condensed", sans-serif;
+.logo-clinica {
+    width: 150px;
 }
 
-.form-container {
-    display: flex;
-    font-family: "Roboto Condensed", sans-serif;
-    justify-content: space-between;
+
+.tit-form-paciente{
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 0;
+    font-size: 9vh;
+    color: #324851;
 }
 
 .form-column {
@@ -71,14 +33,28 @@ img{
     padding: 0 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 7px;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 4vh;
-    text-decoration: underline #324851;
+.form-container{
+    display: grid;
 }
-.btn-registro-medico{
+
+.registro-medico-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #447168;
+    border-radius: 8vh;
+}
+
+label{
+    font-size: 5vh;
+    font-weight: 400;
+}
+
+.disponibilidad{
+    font-size: 4vh; 
+}
+
+.summit-registro-medico{
     border-radius: 2VH;
     background-color: #86ac41;
     color: #34675c;
@@ -94,7 +70,7 @@ label {
 
 }
 
-.btn-registro-medico:hover{
+.summit-registro-medico:hover{
     color:rgb(241, 235, 235);
     scale: 1.1;
 }

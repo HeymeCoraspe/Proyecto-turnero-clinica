@@ -16,63 +16,46 @@
     <title>Clínica Dr. Chapatín- Registro pacientes</title>
 </head>
 <body>
-    <header>
-        <div class="clinica">Clínica Dr. Chapatín</div>
-        <div class="tu-salud"><h5>Tu salud es nuestra prioridad</h5></div>
-    </header>
-    
-    <nav class="navbar navbar-expand-lg bg-NAV">
-        
+  <header class="juanHeader">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="error.html">
-            <img
-              src="images/Green Blue Minimalist Modern Medical Clinics Logo.png"
-              alt="Logos"
-            />
-          </a>
-          <button
-            class="navbar-toggler nav"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <a class="navbar-brand" href="#"><img class="logo-clinica" src="images/Green Blue Minimalist Modern Medical Clinics Logo.png" alt="logo de la clinica"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="medio d-flex justify-content-between">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item inicio">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="index.html"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item s-n">
-                  <a class="nav-link active" aria-current="page" href="nosotros.html" target="_blank"
-                    >Sobre Nosotros</a
-                  >
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link active "
-                    href="carrito.html"
-                    role="button"
-                    target="_blank"
-                    >Especialidades</a>
-    
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        
-    </nav>
+      </nav>
+</header>
 
-    <div>
         <div>
             <h2 class="tit-form-paciente"> Registro de pacientes <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-clipboard-heart" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
@@ -87,22 +70,22 @@
                     <input type="text" id="nombreApellidoPaciente" name="nombreApellido" required placeholder="Nombre Completo"><br>
 
                     <label for="dni">DNI</label>
-                    <input type="number" name="dni" id="dni" required placeholder="Número de dni sin puntos"><br>
+                    <input type="text" name="dni" id="dni-paciente" required placeholder="Número de dni sin puntos"><br>
 
                     <label for="fechaNac">Fecha de nacimiento</label>
                     <input type="date" name="fechaNac" id="fechaNac" required><br>
     
                     <label for="email">Dirección de Email</label>
-                    <input type="email" id="emailPaciente" name="email" required placeholder="Mail"><br>
+                    <input type="email" id="email-Paciente" name="email" required placeholder="Mail"><br>
     
                     <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefonoPaciente" name="telefono" required placeholder="Télefono con característica y sin el 15"><br>
+                    <input type="tel" id="telefono-Paciente" name="telefono" required placeholder="Télefono con característica y sin el 15"><br>
 
                     <label for="direccion">Dirección</label>
-                    <input type="text" id="DirecciónPaciente" name="direccion" required placeholder="Calle, altura, barrio, ciudad"><br>
+                    <input type="text" id="dirección-Paciente" name="direccion" required placeholder="Calle, altura, barrio, ciudad"><br>
 
                     <label for="">Tipo de paciente</label>
-                    <select name="tipoPaciente" id="tipoPaciente">
+                    <select name="tipoPaciente" id="tipo-Paciente">
                       <option value="nada">-</option>
                         <option value="obraSocial">Prepaga</option>
                         <option value="particular">Particular</option>
@@ -121,6 +104,9 @@
                     <label for="numeroAsociado">Número de asociado</label>
                     <input type="text" name="numeroAsociado" id="numeroAsociado" required placeholder="Número de asociado sin puntos ni guiones"><br>
 
+                    <label for="contraseña-paciente">Contraseña</label>
+                    <input type="text" name="contraseña-paciente" required placeholder="Al menos una letra, un número y un caracter especial"><br>
+                   
                     <div id="summit-registro-paciente" style=" position: relative">
                         <button class="btn-registro-paciente">Regristrarse</button><br>
                     </div>
