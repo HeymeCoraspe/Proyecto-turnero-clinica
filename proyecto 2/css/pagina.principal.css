@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #324851;
+}
+
+.header {
+    background-color: #86AC41;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    margin: 20px;
+    text-align: justify;
+    background-color: #7DA3A1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #86AC41;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.imagenes img {
+    width: 32%;
+    margin-bottom: 1%;
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.circle img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.circle p {
+    margin-top: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    fill: #000; /* Cambia el color del icono según tus preferencias */
+}
+
+.h2golden {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    transform: uppercase;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav a:hover {
+    transform: scale(1.1);
+
+.nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav a:hover {
+    transform: scale(1.1);
+}}

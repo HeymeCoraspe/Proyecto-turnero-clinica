@@ -1,0 +1,30 @@
+.doctor-login {
+    background-color: #324851;
+    color: #7DA3A1;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.doctor-login h2 {
+    color: #86AC41;
+}
+
+.doctor-login label,
+.doctor-login input[type="text"],
+.doctor-login input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.doctor-login input[type="submit"] {
+    background-color: #86AC41;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
