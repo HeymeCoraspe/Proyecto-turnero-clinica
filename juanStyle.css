@@ -65,13 +65,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 50px 50px;
+    padding: 50px 0;
     background-image: url(img/bg1.jpeg);
     background-color: rgba(0, 0, 0, 0.5);
     background-size: cover;
     background-attachment: fixed;
     z-index: 2;
-    gap: 50px   ;
+    gap: 50px;
 }
 
 .nosotros::after {
@@ -81,7 +81,7 @@
     left: 0; 
     width: 100%; 
     height: 100%; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.623); 
     z-index: 1; 
 }
 
@@ -109,7 +109,7 @@
 
 .descripcionNosotros {
     margin: 10px 0;
-    background: #448678;
+    background: #448678e3;
     padding: 15px 30px;
     color: white;
     font-size: 19px;
