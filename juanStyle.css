@@ -72,6 +72,7 @@
     background-attachment: fixed;
     z-index: 2;
     gap: 50px;
+    width: 100%;
 }
 
 .nosotros::after {
