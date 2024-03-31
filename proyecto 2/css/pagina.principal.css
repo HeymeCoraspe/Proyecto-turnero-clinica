@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #324851;
+    background-color: rgb(241, 235, 235);
 }
 
 .header {
@@ -59,14 +59,82 @@ body {
     border-radius: 50%;
 }
 
-.circle p {
-    margin-top: 10px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
 }
 
-.icon {
-    width: 50px;
-    height: 50px;
-    fill: #000; /* Cambia el color del icono según tus preferencias */
+.header {
+    background-color: #86AC41;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    margin: 20px;
+    text-align: justify;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #86AC41;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.imagenes img {
+    width: 32%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+.circle img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.circle p {
+    margin-top: 10px;
 }
 
 .h2golden {
@@ -74,6 +142,7 @@ body {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    color: #86AC41;
 }
 
 .nav {
@@ -91,9 +160,15 @@ body {
 
 .nav a:hover {
     transform: scale(1.1);
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    transform: uppercase;
+}
 
 .nav a {
-    color: #333;
+    color: #34675C;
     text-decoration: none;
     margin-right: 20px;
     transition: transform 0.3s ease;
@@ -101,4 +176,21 @@ body {
 
 .nav a:hover {
     transform: scale(1.1);
-}}
+}
+
+.nav a:last-child {
+    margin-right: 0;
+}
+
+.nav a::after {
+    content: " | ";
+}
+
+.nav a:last-child::after {
+    content: "";
+}
+
+.nav a[href="#about"]::after {
+    content: "";
+}
+

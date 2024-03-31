@@ -1,30 +1,48 @@
-.doctor-login {
-    background-color: #324851;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+.medico-login {
+    background-color: rgb(241, 235, 235);
     color: #7DA3A1;
     padding: 20px;
     border-radius: 5px;
     max-width: 400px;
-    margin: auto;
     text-align: center;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
 }
 
-.doctor-login h2 {
+.medico-login h2 {
     color: #86AC41;
 }
 
-.doctor-login label,
-.doctor-login input[type="text"],
-.doctor-login input[type="password"] {
+.medico-login label,
+.medico-login input[type="text"],
+.medico-login input[type="password"] {
     display: block;
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.doctor-login input[type="submit"] {
+.medico-login input[type="submit"] {
     background-color: #86AC41;
     color: #fff;
     border: none;
     padding: 10px;
     cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.medico-login input[type="submit"]:hover {
+    transform: scale(1.05);
 }

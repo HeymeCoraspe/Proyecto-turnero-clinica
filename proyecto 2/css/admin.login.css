@@ -1,11 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
 .admin-login {
-    background-color: #324851;
+    background-color: rgb(241, 235, 235);
     color: #7DA3A1;
     padding: 20px;
     border-radius: 5px;
     max-width: 400px;
-    margin: auto;
     text-align: center;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
 }
 
 .admin-login h2 {
@@ -19,6 +28,8 @@
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .admin-login input[type="submit"] {
@@ -27,4 +38,11 @@
     border: none;
     padding: 10px;
     cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.admin-login input[type="submit"]:hover {
+    transform: scale(1.05);
 }
