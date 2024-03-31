@@ -67,14 +67,18 @@ h2{
 }
 
 .semana-calendario{
-    padding-left: 0;
+    padding-left: 3vh;
 }
 
+.calendar__item{
+    padding-left: 3vh;
+}
 
 .calendar__today{
     background-color: #86ac41;
-    width: 4vh;
+    width: 5vh;
     border-radius: 40vh;
+    padding-left: 1vh;
 }
 
 
