@@ -36,9 +36,7 @@ h2{
 /*estilos calentario*/
 
 .calendario{
-    background-color: #324851;
     width: 100%;
-    margin: 2vh auto;
     color:#86ac41;
 }
 
@@ -61,26 +59,22 @@ h2{
     padding: 2vh;
 }
 
-.semana-calendario{
-    color: black;
+.semana-calendario, .calendar__dates {
+    color: #324851;
     font-size: 4vh;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-
-}
-
-.calendario-item{
-    text-align: center;
-    line-height: 2;
-    padding-left:  2vh;
-}
-
-.calendario-mes, calendario-agno{
-    padding: 3vh 2vh;
 }
 
 .semana-calendario{
-    padding-left:10vh;
+    padding-left: 0;
+}
+
+
+.calendar__today{
+    background-color: #86ac41;
+    width: 4vh;
+    border-radius: 40vh;
 }
 
 
@@ -96,13 +90,19 @@ h2{
 @media (max-width: 635px){
 
     .semana-calendario{
-        font-size: 3vh;
-        text-align: center;
+        font-size: 2vh;
+        text-align: left;
         padding: auto;
     }
 }
 
 @media (max-width: 500px){
+
+    .misTurnos-div{
+        width: 100%;
+        padding-left: 2VH;
+    }
+
     .calendario, .calendario-tit{
         visibility: hidden;
     }
