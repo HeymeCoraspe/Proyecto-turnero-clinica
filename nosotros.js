@@ -1,8 +1,8 @@
 const alumnos = [
-    { nombre: 'Juan Diaz', descripcion: 'Apasionado por la programación, enfocado en el desarrollo web y a futuro me gustaria centrarme en el desarrollo de aplicaciones', imagen: 'card1.jpg' },
-    { nombre: 'Heyme Coraspe', descripcion: 'Descripción del estudiante 2', imagen: 'card2.jpg' },
-    { nombre: 'Antonio Gutierrez', descripcion: 'Descripción del estudiante 3', imagen: 'card3.jpg' },
-    { nombre: 'Fabian Martin', descripcion: 'Descripción del estudiante 4', imagen: 'card4.jpg' }
+    { nombre: 'Juan Diaz', descripcion: 'Me gustó mucho esto de la programación y quiero seguir enfocado en mis estudios para asi a futuro centrarme en el desarrollo de aplicaciones.', imagen: 'card1.jpg' },
+    { nombre: 'Heyme Coraspe', descripcion: 'Entusiasta de la tecnología y la programación, me gustaria seguir capacitandome aun más para que en el futuro pueda desempeñarme de la mejor manera.', imagen: 'card2.jpg' },
+    { nombre: 'Antonio Gutierrez', descripcion: 'Me considero un estudiante comprometido con el aprendizaje continuo y el desarrollo de habilidades en programación.', imagen: 'card3.png' },
+    { nombre: 'Fabian Martin', descripcion: 'Soy un estudiante creativo, me gusta indagar a fondo para poder lograr los trabajos.', imagen: 'card4.jpg' }
 ];
 
 const contenedorAlumnos = () => {
@@ -17,6 +17,11 @@ const contenedorAlumnos = () => {
                 <div class="card-body">
                     <h5 class="card-title">${alumno.nombre}</h5>
                     <p class="card-text">${alumno.descripcion}</p>
+                    <div class="redesNosotros">
+                        <a href="https://github.com/" target="blank"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/" target="blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.facebook.com/" target="blank"><i class="bi bi-facebook"></i></a>
+                    </div>
                 </div>
             </div>
         `;

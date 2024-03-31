@@ -37,13 +37,6 @@
     gap: 20px;
 }
 
-@media screen and (min-width: 768px) {
-    .juanMain {
-        width: 100%;
-        margin: auto;
-    }
-  }
-
 .contenedorWhatsapp {
     background-color: #0df053;
     position: fixed;
@@ -66,24 +59,52 @@
     color: white;
 }
 
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 50px 50px;
+    background-image: url(img/bg1.jpeg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 2;
+    gap: 50px   ;
+}
+
+.nosotros::after {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
 .contenedorNosotros {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    z-index: 10;
 }
 
 .tituloNosotros {
-    color: #213857;
+    color: #96aecc;
     font-size: 35px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .spanTitulo {
-    color: #86ac41;
+    color: rgb(130, 175, 45);
 }
 
 .spanSaludo {
-    color: rgba(128, 128, 128, 0.827);
+    color: rgba(250, 250, 250, 0.827);
 }
 
 .descripcionNosotros {
@@ -101,11 +122,12 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .col-sm-3 {
     width: 60%;
-    margin: auto;
 }
 
 .card {
@@ -120,8 +142,8 @@
 }
 
 .card img {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     padding: 10px;
 }
@@ -130,18 +152,39 @@
     font-weight: bold;
 }
 
+.redesNosotros a i{
+    margin: 5px;
+}
+
+.redesNosotros a{
+    transition: all 5ms ease;
+    color: black;
+    font-size: 20px;
+}
+
+.redesNosotros a:hover{
+    color: rgba(0, 0, 0, 0.575);
+}
+
 @media screen and (min-width: 768px) {
-    #contenedorCards{
+    
+    .contenedorNosotros {
         width: 60%;
+    }
+
+    #contenedorCards{
+        width: 95%;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 30px;
     }
 
     .col-sm-3 {
-        width: 40%;
-        height: 400px;
+        width: 200px;
+        height: 350px;
     }
+}
 
-
-  }
+  
