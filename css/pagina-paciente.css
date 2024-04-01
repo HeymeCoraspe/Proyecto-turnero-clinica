@@ -83,6 +83,7 @@ h2{
 .calendario{
     width: 100%;
     color:#86ac41;
+    margin-bottom: 15vh;
 }
 
 .calendario-info{
@@ -125,6 +126,7 @@ h2{
     border-radius: 40vh;
     padding-left: 1vh;
 }
+
 
 
 /*media quries*/
