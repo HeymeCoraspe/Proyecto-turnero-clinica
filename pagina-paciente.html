@@ -71,12 +71,25 @@
 
     <div class="contenedor-NvoTurno">
       <h5 class="tit-NvoTurno">Ingrese la fecha</h5>
-      <input type="number" id="inpunt-fecha" required>
+      <input type="number" id="inpunt-fecha" required min="1" max="31">
     </div>
 
     <div>
       <h5 class="tit-NvoTurno">Ingrese el mes</h5>
-      <input type="text" id="inpunt-mes" required>
+      <select name="meses" id="meses-turno" required>
+        <option value="">enero</option>
+        <option value="">febrero</option>
+        <option value="">marzo</option>
+        <option value="">abril</option>
+        <option value="">mayo</option>
+        <option value="">junio</option>
+        <option value="">julio</option>
+        <option value="">agosto</option>
+        <option value="">septiembre</option>
+        <option value="">octubre</option>
+        <option value="">noviembre</option>
+        <option value="">diciembre</option>
+      </select>
     </div>
 
     <div>
@@ -227,6 +240,7 @@
       </footer>
 
     <script src="/javascript.js/pagina-pacienta.js"> </script>
+    <script src="/javascript.js/calendario.js"> </script>
 
 </body>
 </html>
