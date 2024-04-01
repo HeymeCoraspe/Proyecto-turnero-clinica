@@ -56,8 +56,60 @@
       </nav>
     </header>
 
+<div class="nuevoTurno">
+
+  <h2>Nuevo Turno
+    <svg fill="#324851" width="45px" height="45px" viewBox="0 0 32 32" data-name="Layer 9" id="Layer_9" xmlns="http://www.w3.org/2000/svg" stroke="#324851" stroke-width="0.32">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title>
+    <path d="M16,1.5A14.5,14.5,0,1,0,30.5,16,14.52,14.52,0,0,0,16,1.5Zm0,28A13.5,13.5,0,1,1,29.5,16,13.52,13.52,0,0,1,16,29.5Z"></path>
+    <ellipse cx="4.06" cy="16" rx="0.94" ry="0.93"></ellipse><ellipse cx="16" cy="4.07" rx="0.94" ry="0.93"></ellipse><ellipse cx="27.94" cy="16" rx="0.94" ry="0.93"></ellipse>
+    <ellipse cx="16" cy="27.93" rx="0.94" ry="0.93"></ellipse><path d="M16.5,15.77V6.86a0.5,0.5,0,0,0-1,0V16a0.5,0.5,0,0,0,.18.38l5,4.21a0.5,0.5,0,0,0,.64-0.77Z"></path></g></svg>
+  </h2>
+
+  <div class="flex-container">
+    <div class="contenedor-NvoTurno">
+      <h5 class="tit-NvoTurno">Ingrese la fecha</h5>
+      <input type="number" id="inpunt-fecha">
+    </div>
+    <div>
+      <h5 class="tit-NvoTurno">Ingrese el mes</h5>
+      <input type="text" id="inpunt-mes">
+    </div>
+    <div>
+      <h5 class="tit-NvoTurno">Seleccione el turno</h5>
+      <label for="turno">Mañana</label> <input type="radio" name="turno-NvoTurno" id="input-TurnoMañana">
+      <label for="turno">Tarde</label> <input type="radio"name="turno-NvoTurno" id="input-TurnoTarde">
+    </div>
+    <div>
+      <h5 class="tit-NvoTurno">Seleccione la especialidad</h5>
+      <select name="especialidad" id="especialidad-NvoTurno">
+        <option value="text">-</option>
+        <option value="text">Alergias</option>
+        <option value="text">Cardiología</option>
+        <option value="text">Dermatología</option>
+        <option value="text">Fonoaudiología</option>
+        <option value="text">Gastroenterología</option>
+      </select>
+    </div>
+    <div>
+      <h5 class="tit-NvoTurno">Seleccione el especialista</h5>
+      <select name="especialista" id="especialista-NvoTurno">
+        <option value="text">-</option>
+        <option value="text">Florencia Durán</option>
+        <option value="text">Noelia Molina</option>
+        <option value="text">Germán Castresana</option>
+        <option value="text">Leandro Alterini</option>
+        <option value="text">Sandra Navarro</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <button class="summit-NvoTurno">Solicitar</button>
+</div>
+<!--------------------------------------------------------------->
     <div class="misTurnos-div">
-      <H2>Mis Turnos <svg width="7vh" height="7vh" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#324851">
+      <H2 class="misTurnos-tit">Mis Turnos <svg width="7vh" height="7vh" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#324851">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier"> <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="#324851" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" 
@@ -67,8 +119,8 @@
       <ul class="list-group" id="misTurnos"></ul>
 
     </div>
-    
-   
+
+<!--------------------------------------------------------------->   
       <h2 class="calendario-tit">Calendario <svg width="7vh" height="7vh" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier"> <path d="M3 9H21M7 3V5M17 3V5M6 12H8M11 12H13M16 12H18M6 15H8M11 15H13M16 15H18M6 18H8M11 18H13M16 18H18M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" 

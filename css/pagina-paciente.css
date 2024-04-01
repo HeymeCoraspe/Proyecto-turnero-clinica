@@ -30,8 +30,55 @@ h2{
     color: #324851;
 }
 
-/*estilos de la li*/
+/*Mis turnos*/
 
+.misTurnos-tit{
+    margin-top: 15vh;
+}
+/*Fin Mis turnos*/
+
+
+/*EStilos Nvo Turno*/
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #324851;
+    margin-top: 2vh;
+   background-color:  #fff;
+   width: 90%;
+   padding: 5vh;
+   margin-left: 8vh;
+   border-radius: 2vh;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+}
+.summit-NvoTurno{
+    border-radius: 2VH;
+    background-color: #86ac41;
+    color: #34675c;
+    width:20vh;
+    height: 6vh;
+    font-size: 4vh;
+    display: grid;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    margin-bottom: 4vh;
+}
+
+.summit-NvoTurno:hover{
+    color:rgb(241, 235, 235);
+    scale: 1.1;
+}
+
+
+
+/*FinEStilos Nvo Turno*/
 
 /*estilos calentario*/
 
@@ -89,6 +136,10 @@ h2{
         font-size: 3vh;
         text-align: center;
     }
+    .flex-container{
+        display: grid;
+        width: 100%;
+    }
 }
 
 @media (max-width: 635px){
@@ -98,16 +149,42 @@ h2{
         text-align: left;
         padding: auto;
     }
+    .flex-container{
+        display: grid;
+        width: 100%;
+        margin: 0;
+        font-size: 4vh;
+    }
+    .tit-NvoTurno{
+        font-size: 4vh;
+    }
+    input, select{
+        outline: none;
+        border: none;
+    }
 }
 
 @media (max-width: 500px){
 
     .misTurnos-div{
         width: 100%;
-        padding-left: 2VH;
+        margin: 0;
     }
 
     .calendario, .calendario-tit{
         visibility: hidden;
+    }
+
+    .flex-container{
+        display: grid;
+        width: 100%;
+        margin: 0;
+    }
+    option{
+        font-size: 2.5vh;
+    }
+    input, select{
+        outline: none;
+        border: none;
     }
 }
