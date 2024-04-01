@@ -67,22 +67,26 @@
   </h2>
 
   <div class="flex-container">
+
     <div class="contenedor-NvoTurno">
       <h5 class="tit-NvoTurno">Ingrese la fecha</h5>
-      <input type="number" id="inpunt-fecha">
+      <input type="number" id="inpunt-fecha" required>
     </div>
+
     <div>
       <h5 class="tit-NvoTurno">Ingrese el mes</h5>
-      <input type="text" id="inpunt-mes">
+      <input type="text" id="inpunt-mes" required>
     </div>
+
     <div>
       <h5 class="tit-NvoTurno">Seleccione el turno</h5>
-      <label for="turno">Mañana</label> <input type="radio" name="turno-NvoTurno" id="input-TurnoMañana">
-      <label for="turno">Tarde</label> <input type="radio"name="turno-NvoTurno" id="input-TurnoTarde">
+      <label for="turno">Mañana</label> <input type="radio" name="turno-NvoTurno" id="input-TurnoMañana"  required>
+      <label for="turno">Tarde</label> <input type="radio"name="turno-NvoTurno" id="input-TurnoTarde"  required>
     </div>
+
     <div>
       <h5 class="tit-NvoTurno">Seleccione la especialidad</h5>
-      <select name="especialidad" id="especialidad-NvoTurno">
+      <select name="especialidad" id="especialidad-NvoTurno"  required>
         <option value="text">-</option>
         <option value="text">Alergias</option>
         <option value="text">Cardiología</option>
@@ -91,9 +95,10 @@
         <option value="text">Gastroenterología</option>
       </select>
     </div>
+
     <div>
       <h5 class="tit-NvoTurno">Seleccione el especialista</h5>
-      <select name="especialista" id="especialista-NvoTurno">
+      <select name="especialista" id="especialista-NvoTurno" required>
         <option value="text">-</option>
         <option value="text">Florencia Durán</option>
         <option value="text">Noelia Molina</option>
@@ -102,10 +107,15 @@
         <option value="text">Sandra Navarro</option>
       </select>
     </div>
+
+    <div>
+      <h5>Motivo de la consulta</h5>
+      <textarea name="motivoConsulta" id="motivoConsulta" cols="20" rows="2" placeholder="Describa el motivo de la consulta" required></textarea>
+    </div>
   </div>
 </div>
 <div class="container-fluid">
-  <button class="summit-NvoTurno">Solicitar</button>
+  <button class="summit-NvoTurno" id="enviarForm">Solicitar</button>
 </div>
 <!--------------------------------------------------------------->
     <div class="misTurnos-div">

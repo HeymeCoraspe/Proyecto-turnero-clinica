@@ -45,11 +45,9 @@ h2{
     align-items: center;
     color: #324851;
     margin-top: 2vh;
-   background-color:  #fff;
-   width: 90%;
-   padding: 5vh;
-   margin-left: 8vh;
-   border-radius: 2vh;
+    background-color:  #fff;
+    padding: auto;
+    border-radius: 2vh;
 }
 .container-fluid{
     display: flex;
@@ -138,7 +136,7 @@ h2{
     }
     .flex-container{
         display: grid;
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -158,7 +156,7 @@ h2{
     .tit-NvoTurno{
         font-size: 4vh;
     }
-    input, select{
+    input, select, textarea{
         outline: none;
         border: none;
     }
