@@ -9,6 +9,8 @@ body{
     border: 1px solid rgb(225, 226, 235);
     padding: 0;
     position: relative;
+    background-color: #324851;
+
 }
 
 .offcanvas {

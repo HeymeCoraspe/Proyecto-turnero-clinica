@@ -17,7 +17,7 @@
     <title>Clínica Dr. Chapatín- Web del paciente</title>
 </head>
 <body>
-    <header class="juanHeader">
+    <header class="juanHeader" style="background-color: #324851;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img class="logo-clinica" src="images/logoclinica.png" alt="logo de la clinica"></a>
@@ -66,71 +66,85 @@
     <ellipse cx="4.06" cy="16" rx="0.94" ry="0.93"></ellipse><ellipse cx="16" cy="4.07" rx="0.94" ry="0.93"></ellipse><ellipse cx="27.94" cy="16" rx="0.94" ry="0.93"></ellipse>
     <ellipse cx="16" cy="27.93" rx="0.94" ry="0.93"></ellipse><path d="M16.5,15.77V6.86a0.5,0.5,0,0,0-1,0V16a0.5,0.5,0,0,0,.18.38l5,4.21a0.5,0.5,0,0,0,.64-0.77Z"></path></g></svg>
   </h2>
-
+  <form action="submit" id="form-turno">
   <div class="flex-container">
-
+    <!----- ---> 
     <div class="contenedor-NvoTurno">
+     
       <h5 class="tit-NvoTurno">Ingrese la fecha</h5>
-      <input type="number" id="inpunt-fecha" required min="1" max="31">
+      <input type="number" value="1" id="input-fecha" required min="1" max="31">
     </div>
 
     <div>
       <h5 class="tit-NvoTurno">Ingrese el mes</h5>
       <select name="meses" id="meses-turno" required>
-        <option value="">enero</option>
-        <option value="">febrero</option>
-        <option value="">marzo</option>
-        <option value="">abril</option>
-        <option value="">mayo</option>
-        <option value="">junio</option>
-        <option value="">julio</option>
-        <option value="">agosto</option>
-        <option value="">septiembre</option>
-        <option value="">octubre</option>
-        <option value="">noviembre</option>
-        <option value="">diciembre</option>
+        <option value="enero">enero</option>
+        <option value="febrero">febrero</option>
+        <option value="marzo">marzo</option>
+        <option value="abril">abril</option>
+        <option value="mayo">mayo</option>
+        <option value="junio">junio</option>
+        <option value="julio">julio</option>
+        <option value="agosto">agosto</option>
+        <option value="septiembre">septiembre</option>
+        <option value="octubre">octubre</option>
+        <option value="noviembre">noviembre</option>
+        <option value="diciembre">diciembre</option>
       </select>
     </div>
 
     <div>
-      <h5 class="tit-NvoTurno">Seleccione el turno</h5>
-      <label for="turno">Mañana</label> <input type="radio" name="turno-NvoTurno" id="input-TurnoMañana"  required>
-      <label for="turno">Tarde</label> <input type="radio"name="turno-NvoTurno" id="input-TurnoTarde"  required>
+      <h5 class="tit-NvoTurno">Seleccione el horario</h5>
+      <select name="turno" id="horarioTurno" type="number" value="number">
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+      </select>   
     </div>
 
     <div>
       <h5 class="tit-NvoTurno">Seleccione la especialidad</h5>
-      <select name="especialidad" id="especialidad-NvoTurno"  required>
-        <option value="text">-</option>
-        <option value="text">Alergias</option>
-        <option value="text">Cardiología</option>
-        <option value="text">Dermatología</option>
-        <option value="text">Fonoaudiología</option>
-        <option value="text">Gastroenterología</option>
+      <select name="especialidad" id="especialidad-NvoTurno"  required value="text">
+        <option value="Alergias" checked>Alergias</option>
+        <option value="Cardiología">Cardiología</option>
+        <option value="Dermatología">Dermatología</option>
+        <option value="Fonoaudiología">Fonoaudiología</option>
+        <option value="Gastroenterología">Gastroenterología</option>
       </select>
     </div>
 
     <div>
       <h5 class="tit-NvoTurno">Seleccione el especialista</h5>
       <select name="especialista" id="especialista-NvoTurno" required>
-        <option value="text">-</option>
-        <option value="text">Florencia Durán</option>
-        <option value="text">Noelia Molina</option>
-        <option value="text">Germán Castresana</option>
-        <option value="text">Leandro Alterini</option>
-        <option value="text">Sandra Navarro</option>
+        <option value="Florencia Durán" checked>Florencia Durán</option>
+        <option value="Noelia Molina">Noelia Molina</option>
+        <option value="Germán Castresana">Germán Castresana</option>
+        <option value="Leandro Alterini">Leandro Alterini</option>
+        <option value="Sandra Navarro">Sandra Navarro</option>
       </select>
     </div>
 
     <div>
       <h5>Motivo de la consulta</h5>
-      <textarea name="motivoConsulta" id="motivoConsulta" cols="20" rows="2" placeholder="Describa el motivo de la consulta" required></textarea>
+      <textarea type="text" name="motivoConsulta" id="motivoConsulta" cols="20" rows="2" placeholder="Describa el motivo de la consulta" required value="0"></textarea>
     </div>
+    
   </div>
 </div>
+</form>
 <div class="container-fluid">
-  <button class="summit-NvoTurno" id="enviarForm">Solicitar</button>
+  <button type="submit" class="summit-NvoTurno" id="enviarForm">Solicitar</button>
 </div>
+
 <!--------------------------------------------------------------->
     <div class="misTurnos-div">
       <H2 class="misTurnos-tit">Mis Turnos <svg width="7vh" height="7vh" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#324851">
