@@ -60,12 +60,19 @@
 } 
 
 .contenedorRegistroMedico { 
-  width: 60%;
+  width: 90%;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.055);
   box-shadow: 0 12px 24px 1px #d4e0ec;
 }
+
+@media screen and (min-width: 768px) {
+  .contenedorRegistroMedico { 
+    max-width: 550px;
+  }
+  
+} 
 
 .contenedorRegistroMedico h2 {
   background-color:#324851be !important;
