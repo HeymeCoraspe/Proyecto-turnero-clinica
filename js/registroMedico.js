@@ -20,6 +20,7 @@ localStorage.setItem('telefono', telefono);
 localStorage.setItem('especialidad', especialidad);
 localStorage.setItem('usuarioMedico', usuarioMedico);
 localStorage.setItem('contraseñaMedico', contraseñaMedico);
+
 alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
 
 });
