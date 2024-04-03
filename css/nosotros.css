@@ -1,0 +1,228 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar {
+    background-color: #324851e7 !important;
+    box-shadow: 0 8px 12px #32485183 !important; 
+    position: relative;
+    top: 0;
+  }
+  
+  .logo-clinica {
+    width: 150px;
+  }
+  
+  .logo-clinica:hover {
+    opacity: .3;
+    transition: all 0.5s ease !important;
+    cursor: pointer;
+  }
+  
+  .navbar-toggler {
+    border: 1px solid rgb(129, 126, 126);
+  }
+  
+  .navbar-toggler-icon {
+    filter: invert();
+  }
+  
+  .offcanvas-header {
+    background-color: #324851e7;
+    color: white;
+  }
+  
+  .navbar-nav {
+    gap: 20px;
+  }
+  
+  .nav-item {
+    border-bottom: 1px solid #324851e7 !important;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .nav-item {
+        border: none !important;
+    }
+  
+    .nav-link {
+        color: white !important;
+    }
+  
+    .nav-link:hover {
+        color: rgba(0, 0, 0, 0.7) !important;
+        transition: all 0.5s ease !important;
+        cursor: pointer;
+    }
+    
+  } 
+
+/*****MAIN*****/
+
+.juanMain {
+    padding: 10px 0;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Libre Franklin", sans-serif;
+    text-align: center;
+    gap: 20px;
+}
+
+.contenedorWhatsapp {
+    background-color: #0df053;
+    position: fixed;
+    bottom: 20px;
+    right: 10px; 
+    width: 55px; 
+    height: 55px; 
+    cursor: pointer; 
+    z-index: 1000; 
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+.whatsappLogo {
+    color: white;
+}
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 50px 0;
+    background-image: url(/img/bg1.jpeg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 2;
+    gap: 50px;
+    width: 100%;
+}
+
+.nosotros::after {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.623); 
+    z-index: 1; 
+}
+
+.contenedorNosotros {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+}
+
+.tituloNosotros {
+    color: #96aecc;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.spanTitulo {
+    color: rgb(130, 175, 45);
+}
+
+.spanSaludo {
+    color: rgba(250, 250, 250, 0.827);
+}
+
+.descripcionNosotros {
+    margin: 10px 0;
+    background: #448678e3;
+    padding: 15px 30px;
+    color: white;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/*****CARDS*****/
+
+#contenedorCards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-sm-3 {
+    width: 60%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 0 12px 24px 1px #d4e0ec;
+    width: 100%;
+    margin: auto;
+}
+
+.card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.redesNosotros a i{
+    margin: 5px;
+}
+
+.redesNosotros a{
+    transition: all 5ms ease;
+    color: black;
+    font-size: 20px;
+}
+
+.redesNosotros a:hover{
+    color: rgba(0, 0, 0, 0.575);
+}
+
+@media screen and (min-width: 768px) {
+    
+    .contenedorNosotros {
+        width: 60%;
+    }
+
+    #contenedorCards{
+        width: 95%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .col-sm-3 {
+        width: 200px;
+        height: 350px;
+    }
+}
+
+  

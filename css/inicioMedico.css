@@ -1,0 +1,136 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #324851e7 !important;
+  box-shadow: 0 8px 12px #32485183 !important; 
+  position: relative;
+  top: 0;
+}
+
+.logo-clinica {
+  width: 150px;
+}
+
+.logo-clinica:hover {
+  opacity: .3;
+  transition: all 0.5s ease !important;
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  border: 1px solid rgb(129, 126, 126);
+}
+
+.navbar-toggler-icon {
+  filter: invert();
+}
+
+.offcanvas-header {
+  background-color: #324851e7;
+  color: white;
+}
+
+.navbar-nav {
+  gap: 20px;
+}
+
+.nav-item {
+  border-bottom: 1px solid #324851e7 !important;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-item {
+      border: none !important;
+  }
+
+  .nav-link {
+      color: white !important;
+  }
+
+  .nav-link:hover {
+      color: rgba(0, 0, 0, 0.7) !important;
+      transition: all 0.5s ease !important;
+      cursor: pointer;
+  }
+  
+} 
+
+.contenedorInicioMedico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedorBotones {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+}
+
+.iconoInicio {
+  width: 30px;
+}
+
+form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #cccccc52;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 12px 24px 1px #d4e0ec;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+
+  .contenedorBtnInicio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  input[type="submit"],
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover,
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  
