@@ -1,14 +1,14 @@
-  const inicioMedico = document.getElementById('inicioMedico');
-  inicioMedico.addEventListener('submit', function(event) {
-  event.preventDefault(); 
+const inicioMedico = document.getElementById('inicioMedico');
+inicioMedico.addEventListener('submit', function(event) {
+event.preventDefault(); 
 
-  const usuarioMedico = inicioMedico.elements['usuarioMedico'].value;
-  const contraseñaMedico = inicioMedico.elements['contraseñaMedico'].value;
+const usuarioMedico = inicioMedico.elements['usuarioMedico'].value;
+const contraseñaMedico = inicioMedico.elements['contraseñaMedico'].value;
 
 // SE OBTIENEN LOS DATOS ALMACENADOS EN EL LOCALSTORAGE
 
-    const storedUsuario = localStorage.getItem('usuarioMedico');
-    const storedContraseña = localStorage.getItem('contraseñaMedico');
+const storedUsuario = localStorage.getItem('usuarioMedico');
+const storedContraseña = localStorage.getItem('contraseñaMedico');
 
 // CONDICION PARA SABER SI LOS DATOS COINCIDEN
     if (usuarioMedico === storedUsuario && contraseñaMedico === storedContraseña) {

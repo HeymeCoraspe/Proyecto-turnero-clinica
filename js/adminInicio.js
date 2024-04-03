@@ -41,7 +41,7 @@ registroAdmin.addEventListener('submit', function(event) {
 
 if (usuario === 'admin' && contraseña === 'rolling') {
     alert('Iniciando sesion');
-    window.location.href = 'pages/inicioMedico.html';
+    window.location.href = 'pages/adminPanel.html';
     modal.style.display = 'none';
 
 } else {
