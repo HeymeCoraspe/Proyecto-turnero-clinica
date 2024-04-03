@@ -1,5 +1,5 @@
 const alumnos = [
-    { nombre: 'Juan Diaz', descripcion: 'Me gustó mucho esto de la programación y quiero seguir enfocado en mis estudios para asi a futuro centrarme en el desarrollo de aplicaciones.', imagen: 'card1.jpg' },
+    { nombre: 'Juan Diaz', descripcion: 'Me gustó mucho esto de la programación y quiero seguir enfocado en mis estudios para asi a futuro centrarme en el desarrollo de aplicaciones.', imagen: 'card1.jpeg' },
     { nombre: 'Heyme Coraspe', descripcion: 'Entusiasta de la tecnología y la programación, me gustaria seguir capacitandome aun más para que en el futuro pueda desempeñarme de la mejor manera.', imagen: 'card2.jpg' },
     { nombre: 'Antonio Gutierrez', descripcion: 'Me considero un estudiante comprometido con el aprendizaje continuo y el desarrollo de habilidades en programación.', imagen: 'card3.png' },
     { nombre: 'Fabian Martin', descripcion: 'Soy un estudiante creativo, me gusta indagar a fondo para poder lograr los trabajos.', imagen: 'fabiantop.jpg' }

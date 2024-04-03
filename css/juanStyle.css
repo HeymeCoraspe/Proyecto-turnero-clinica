@@ -128,30 +128,135 @@
     color: white;
 }
 
-form {
-    padding: 10px;
-    border: 1px solid #cccccc52;
-    border-radius: 5px;
+.contenedorConsultaMapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     width: 100%;
+    background-image: url(/img/fondo2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 20px;
+}
+
+.contenedorConsultaMapa::after {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.274); 
+    z-index: 1; 
+}
+
+
+
+.mapitaInicio {
     margin: auto;
-  }
-  
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    width: 80%;
+    height: 400px;
+}
+
+.contenedorConsulta {
+    z-index: 2;
+    width: 50%;
+    margin: 10px;
+
+}
+
+.contenedorConsulta h2 {
+    font-size: 20px;
+    color: white;
+    background-color: #324851;
+    padding: 15px;
     border-radius: 30px;
+    text-align: center;
+    width: 40%;
+    margin: auto;
 }
 
-.modal {
-    background-color: rgba(0, 0, 0, 0.381)
+.contenedorMapa {
+    z-index: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
-.modal-content {
+#formConsulta {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.055);
     box-shadow: 0 12px 24px 1px #d4e0ec;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    background-color: rgb(245, 245, 245);
+    margin: auto;
 }
 
-.modal-body {
-    padding: 0;
+#formConsulta div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
 }
+
+#formConsulta input {
+    border-radius: 30px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+#formConsulta label {
+    font-weight: bold;
+}
+
+#formConsulta textarea {
+    border-radius: 30px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1024px) {
+    .contenedorConsultaMapa {
+        flex-direction: column;
+    }
+    
+    .mapitaInicio {
+        width: 330px;
+        height: 330px;
+    }
+
+    .contenedorConsulta {
+        width: 100%;
+    }
+
+  } 
+
+  @media screen and (max-width: 768px) {
+    .contenedorConsultaMapa {
+        flex-direction: column;
+    }
+    
+    .mapitaInicio {
+        width: 300px;
+        height: 300px;
+    }
+
+    .contenedorConsulta {
+        width: 100%;
+    }
+
+    .contenedorConsulta h2 {
+        width: 60%;
+    }
+
+    #formConsulta {
+        width: 300px;
+    }
+
+  } 

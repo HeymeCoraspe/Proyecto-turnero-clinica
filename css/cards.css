@@ -12,6 +12,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px;
+    gap: 50px;
 }
 
 .cards {
