@@ -1,4 +1,5 @@
-# Proyecto-turnero-clinica ![logoclinica](https://github.com/HeymeCoraspe/Proyecto-turnero-clinica/assets/115550175/b48e36a9-dc1f-4496-9f71-40a4069f4f08)
+![logoclinica](https://github.com/HeymeCoraspe/Proyecto-turnero-clinica/assets/115550175/b48e36a9-dc1f-4496-9f71-40a4069f4f08)
+# Proyecto-turnero-clinica
 
 ## Central de turnos online para clínica
 
