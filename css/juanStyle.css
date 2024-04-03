@@ -1,0 +1,107 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #324851e7 !important; 
+    box-shadow: 0 8px 12px #32485183 !important; 
+  position: relative;
+}
+
+.logo-clinica {
+    width: 150px;
+}
+
+.logo-clinica:hover {
+    opacity: .3;
+    transition: all 0.5s ease !important;
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    border: 1px solid rgb(129, 126, 126);
+}
+
+.navbar-toggler-icon {
+    filter: invert();
+}
+
+.offcanvas-header {
+    background-color: #324851e7;
+    color: white;
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.nav-item {
+    border-bottom: 1px solid #324851e7 !important;
+}
+
+@media screen and (min-width: 992px) {
+    .nav-item {
+        border: none !important;
+    }
+
+    .nav-link {
+        color: white !important;
+    }
+
+    .nav-link:hover {
+        color: rgba(0, 0, 0, 0.7) !important;
+        transition: all 0.5s ease !important;
+        cursor: pointer;
+    }
+
+}  
+
+.contenedorImagen {
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    .contenedorImagen {
+        height: 60vh;
+    }
+}  
+
+@media screen and (min-width: 1024px) {
+    .contenedorImagen {
+        height: 80vh;
+    } 
+}  
+
+.contenedorImagen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tituloImagen {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 90%; 
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.tituloImagen h3 {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    background-color: #32485188; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+}

@@ -1,0 +1,108 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;  
+}
+
+.navbar {
+  background-color: #324851e7 !important;
+  box-shadow: 0 8px 12px #32485183 !important; 
+  position: relative;
+  top: 0;
+}
+
+.logo-clinica {
+  width: 150px;
+}
+
+.logo-clinica:hover {
+  opacity: .3;
+  transition: all 0.5s ease !important;
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  border: 1px solid rgb(129, 126, 126);
+}
+
+.navbar-toggler-icon {
+  filter: invert();
+}
+
+.offcanvas-header {
+  background-color: #324851e7;
+  color: white;
+}
+
+.navbar-nav {
+  gap: 20px;
+}
+
+.nav-item {
+  border-bottom: 1px solid #324851e7 !important;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-item {
+      border: none !important;
+  }
+
+  .nav-link {
+      color: white !important;
+  }
+
+  .nav-link:hover {
+      color: rgba(0, 0, 0, 0.7) !important;
+      transition: all 0.5s ease !important;
+      cursor: pointer;
+  }
+  
+} 
+
+.contenedorRegistroMedico { 
+  width: 60%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.055);
+  box-shadow: 0 12px 24px 1px #d4e0ec;
+}
+
+.contenedorRegistroMedico h2 {
+  background-color:#324851be !important;
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+}
+  
+#registroMedico, #registroPaciente{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(204, 204, 204, 0.712);
+}
+
+.contenedorBotones {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
