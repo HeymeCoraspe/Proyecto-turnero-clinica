@@ -1,9 +1,9 @@
   const inicioMedico = document.getElementById('inicioMedico');
   inicioMedico.addEventListener('submit', function(event) {
-    event.preventDefault(); 
+  event.preventDefault(); 
 
-    const usuarioMedico = inicioMedico.elements['usuarioMedico'].value;
-    const contraseñaMedico = inicioMedico.elements['contraseñaMedico'].value;
+  const usuarioMedico = inicioMedico.elements['usuarioMedico'].value;
+  const contraseñaMedico = inicioMedico.elements['contraseñaMedico'].value;
 
 // SE OBTIENEN LOS DATOS ALMACENADOS EN EL LOCALSTORAGE
 
