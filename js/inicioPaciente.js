@@ -28,7 +28,7 @@ btnCrearCuenta.addEventListener('click', function() {
 
 const btnVolver = document.getElementById('btnVolver');
 btnVolver.addEventListener('click', function() {
-  window.location.href = '../inicioJuan.html'; 
+  window.location.href = '../index.html'; 
 });
     
 
