@@ -1,0 +1,505 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #324851 !important; 
+    box-shadow: 0 8px 12px #32485183 !important; 
+    position: relative;
+    padding: 0;
+}
+
+.logo-clinica {
+    width: 150px;
+}
+
+.logo-clinica:hover {
+    opacity: .3;
+    transition: all 0.5s ease !important;
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    border: 1px solid rgb(129, 126, 126);
+}
+
+.navbar-toggler-icon {
+    filter: invert();
+}
+
+.offcanvas {
+    width: 350px !important;
+}
+
+.offcanvas-header {
+    background-color: #324851e7;
+    color: white;
+}
+
+.navbar-nav {
+    gap: 20px;
+    font-size: 20px;
+}
+
+.nav-item {
+    border-bottom: 1px solid #324851e7 !important;
+}
+
+@media screen and (min-width: 992px) {
+    .nav-item {
+        border: none !important;
+    }
+
+    .nav-link {
+        color: white !important;
+    }
+
+    .nav-link:hover {
+        color: rgb(88, 174, 255) !important;
+        transition: all 0.5s ease !important;
+        cursor: pointer;
+    }
+
+    .navbar-nav {
+        font-size: 16px;
+    }
+
+    .dropdown-menu {
+        background-color: #324851 !important;
+        width: 170px;
+    }
+
+}  
+
+.contenedorImagen {
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    .contenedorImagen {
+        height: 60vh;
+    }
+}  
+
+@media screen and (min-width: 1024px) {
+    .contenedorImagen {
+        height: 80vh;
+    } 
+}  
+
+.contenedorImagen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tituloImagen {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 90%; 
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.tituloImagen h3 {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    background-color: #32485188; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+}
+
+.contenedorWhatsapp {
+    background-color: #0df053;
+    position: fixed;
+    bottom: 20px;
+    right: 10px; 
+    width: 55px; 
+    height: 55px; 
+    cursor: pointer; 
+    z-index: 1000; 
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+.whatsappLogo {
+    color: white;
+}
+
+.contenedorConsultaMapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background-image: url(/img/fondo2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 20px;
+}
+
+.contenedorConsultaMapa::after {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.274); 
+    z-index: 1; 
+}
+
+
+
+.mapitaInicio {
+    margin: auto;
+    width: 80%;
+    height: 400px;
+}
+
+.contenedorConsulta {
+    z-index: 2;
+    width: 50%;
+    margin: 10px;
+
+}
+
+.contenedorConsulta h2 {
+    font-size: 20px;
+    color: white;
+    background-color: #324851;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+
+.contenedorMapa {
+    z-index: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#formConsulta {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.055);
+    box-shadow: 0 12px 24px 1px #d4e0ec;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    background-color: rgb(245, 245, 245);
+    margin: auto;
+}
+
+#formConsulta div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+#formConsulta input {
+    border-radius: 30px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+#formConsulta label {
+    font-weight: bold;
+}
+
+#formConsulta textarea {
+    border-radius: 30px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1024px) {
+    .contenedorConsultaMapa {
+        flex-direction: column;
+    }
+    
+    .mapitaInicio {
+        width: 330px;
+        height: 330px;
+    }
+
+    .contenedorConsulta {
+        width: 100%;
+    }
+
+  } 
+
+  @media screen and (max-width: 768px) {
+    .contenedorConsultaMapa {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+    .mapitaInicio {
+        width: 300px;
+        height: 300px;
+    }
+
+    .contenedorConsulta {
+        width: 100%;
+    }
+
+    .contenedorConsulta h2 {
+        width: 60%;
+    }
+
+    #formConsulta {
+        width: 300px;
+        padding: 5px;
+    }
+
+  } 
+
+.swal2-image{
+    margin: 10px auto !important;
+}
+
+.swal2-title {
+    padding: 5px !important;
+}
+
+
+/*****CARDS MAIN ANTONIO*****/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+    }
+
+    main {
+        padding: 5px;
+    }
+  } 
+
+.card {
+    background-color: #FFFFFF;
+    color: #34675C;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    color: #34675C;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: #34675C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*****FIN DE LAS CARDS MAIN ANTONIO*****/
+
+
+
+/*****FOOTER FABIAN*****/
+
+.pie-pagina{
+    width: 100%;
+    bottom: 0;
+    background-color: #324851;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 100px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+    border-radius: 50%;
+}
+
+
+.pie-pagina .grupo-1 .box h2{
+    color: #86ac41;
+    margin-bottom: 25px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: white;
+    margin-bottom: 10px;
+    text-align:left;
+}
+
+.pie-pagina .grupo-1 .box{
+    color: white;
+}
+
+.pie-pagina .grupo-1 .box a{
+    text-decoration: none;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .box a:hover{
+    color: #86ac41;
+}
+
+.pie-pagina .grupo-1 .redsocial a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    transition: all 300ms ease;
+}
+
+/*sirve para que al pasar el cursor sobre los iconos de la red social se muestren de color*/
+.pie-pagina .grupo-1 .redsocial a:hover{
+    color: #86ac41;
+}
+
+/*sirve para poner color de fondo, separar del margen, centrar el texto, y poner color a las letras, de la ultima parte del footer*/
+.pie-pagina .grupo-2{
+    background-color: #7da3a1;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+/*sirve para aumentar el tamaño de las ultimas letras*/
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+/*sirve para poner las 4 columnas del footer*/
+@media only screen and (min-width:1200px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+@media only screen and (max-width:1080px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+/*sirve para poner las 2 columnas del footer*/
+@media only screen and (max-width:900px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+/*sirve para poner las 1 columnas del footer*/
+@media only screen and (max-width:600px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+/*****FIN DEL FOOTER FABIAN*****/
