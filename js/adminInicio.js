@@ -1,13 +1,24 @@
+// SIRVE PARA QUE AL HACER SCCROLL EL NAVBAR SE MUESTRE CON OTRO BACKGROUND-COLOR PORQUE TIENE EL FIXED-TOP DE BOOTSTRAP
 window.addEventListener('scroll', function() {
-  var navbar = document.getElementById('navbar');
-  var scrollThreshold = window.innerWidth < 768 ? 100 : 400;
+  let navbar = document.getElementById('navbar');
+  let scrollThreshold = window.innerWidth < 768 ? 100 : 400;
   if (window.scrollY > scrollThreshold) {
-    navbar.classList.add('scrolled');
+    navbar.classList.add('scrolled'); //AL HACER SCROLL SE AGREGA ESTA CLASE
 } else {
     navbar.classList.remove('scrolled');
 }
 });
 
+//SIRVE PARA QUE EL LOGO DE WHATSAPP APAREZCA CON UNA OPACIDAD EN UN DETERMINADO SCROLL
+const contenedorWhatsapp = document.getElementById('contenedorWhatsapp');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    contenedorWhatsapp.classList.add('mostrar');
+  } else {
+    contenedorWhatsapp.classList.remove('mostrar');
+  }
+});
 
 const formConsulta = document.getElementById('formConsulta');
 

@@ -11,13 +11,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/logoclinica.ico" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <header class="juanHeader">
+    <header class="headerPrincipal">
         <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img class="logo-clinica" src="img/logoclinica.png" alt="logo de la clinica"></a>
+              <a class="navbar-brand" href="index.html"><img class="logo-clinica" src="img/logoclinica.png" alt="logo de la clinica"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -65,18 +69,20 @@
         </nav>
         <div class="contenedorImagen">
            <div class="tituloImagen">
-              <h3></h3>
+              <h1>Cuidamos tu salud</h1>
+              <span class="descripcionImagen">Realiza tus chequeos y estudios en Clinica Dr. Chapatin</span>
+              <button class="btn btn-success">Ver especialidades</button>
            </div>
         </div>
     </header>
     <main>
-      <div class="contenedorWhatsapp"><a
+      <div id="contenedorWhatsapp" class="contenedorWhatsapp"><a
         class="whatsappLogo"
         href="https://wa.me/+5493814955080?text=Hola%20buenas,%20tengo%20una%20consulta."
         target="_blank"
         ><i class="bi bi-whatsapp"></i
       ></a></div>
-      <div class="cards">
+      <div class="cards" id="cardsAnimation">
           <div class="card">
               <img src="https://conceptodefinicion.de/wp-content/uploads/2017/12/Obra_Social2.jpg" alt="Obra Social" width="200" height="150">
               <h2>Obra Sociales</h2>
@@ -130,7 +136,7 @@
         <div class="box">
             <figure>
                 
-                    <img src="/img/logoclinica.png" alt="logo">
+                    <a href="index.html"><img class="logo-clinica" src="/img/logoclinica.png" alt="logo"></a>
                 
             </figure>
         </div>
@@ -167,10 +173,10 @@
             <hr>
             <br>
             <div class="redsocial" style="text-align: center;">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-meta"></a>
-                <a href="#" class="fa fa-linkedin"></a>
+                <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://www.whatsapp.com" target="_blank" class="fa fa-whatsapp"></a>
+                <a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin"></a>
                    
             </div>
         </div>

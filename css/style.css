@@ -4,9 +4,11 @@
     margin: 0;
 }
 
+/*****COMIENZO DEL HEADER PRINCIPAL*****/
+
 .navbar {
-    background-color: rgba(0, 0, 0, 0.0) !important; /* Opacidad inicial */
-    transition: background-color 0.3s ease !important; /* Transición suave */
+    background-color: rgba(0, 0, 0, 0.0) !important; 
+    transition: background-color 0.3s ease !important; 
     padding: 5px;
 }
 
@@ -15,9 +17,7 @@
 }
 
 .logo-clinica {
-    width: 150px;   
-    /* filter: saturate(200%); */
-    /* filter: brightness(120%); */
+    width: 160px;   
     filter: contrast(600%);
 }
 
@@ -29,10 +29,12 @@
 
 .navbar-toggler {
     border: 1px solid rgb(129, 126, 126);
+    background-color: rgba(128, 128, 128, 0.7);
 }
 
 .navbar-toggler-icon {
     filter: invert();
+    
 }
 
 .offcanvas {
@@ -66,7 +68,7 @@
     }
 
     .nav-link:hover {
-        color: rgb(88, 174, 255) !important;
+        color: greenyellow !important;
         transition: all 0.5s ease !important;
         cursor: pointer;
     }
@@ -97,7 +99,7 @@
 
 @media screen and (min-width: 1024px) {
     .contenedorImagen {
-        height: 100vh;
+        height: 95vh;
         background-position: top;
     } 
 }  
@@ -114,23 +116,42 @@
 
 .tituloImagen {
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     left: 50%;
-    width: 90%; 
+    width: 30%; 
     transform: translateX(-50%);
     text-align: center;
-}
-
-.tituloImagen h3 {
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
-    background-color: #32485188; 
+    z-index: 1000;
+    background-color: #324851d1; 
     padding: 10px 20px; 
-    border-radius: 5px; 
+    border-radius: 30px;
+    color: white;
 }
 
-.contenedorWhatsapp {
+.tituloImagen h1 {
+    font-size: 35px;
+    font-weight: bold;
+    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s; /* don't forget to set a duration! */
+}
+
+.tituloImagen span {
+    display: block;
+    animation: slideInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s; /* don't forget to set a duration! */
+}
+
+.tituloImagen button {
+    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s; /* don't forget to set a duration! */
+    margin-top: 10px;
+}
+
+/*****FIN HEADER*****/
+
+/*****CONTENEDOR WHATSAPP FLOTANTE*****/
+
+#contenedorWhatsapp {
     background-color: #0df053;
     position: fixed;
     bottom: 20px;
@@ -146,12 +167,101 @@
     align-items: center;
     font-size: 30px;
     color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
+
+#contenedorWhatsapp.mostrar {
+    opacity: 1;
+  }
 
 .whatsappLogo {
     color: white;
 }
 
+/*****FIN CONTENEDOR WHATSAPP FLOTANTE*****/
+
+/*****CARDS MAIN ANTONIO*****/
+
+main {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+    }
+
+    main {
+        padding: 5px;
+    }
+  } 
+
+.card {
+    background-color: #FFFFFF;
+    color: #34675C;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    color: #34675C;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: #34675C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*****FIN DE LAS CARDS MAIN ANTONIO*****/
+
+/*****CONTENEDOR CONSULTA Y MAPA*****/
 .contenedorConsultaMapa {
     display: flex;
     justify-content: center;
@@ -292,102 +402,14 @@
     padding: 5px !important;
 }
 
-
-/*****CARDS MAIN ANTONIO*****/
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f3f3;
-}
-
-main {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    gap: 50px;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 30px;
-}
-
-@media screen and (max-width: 768px) {
-    .cards {
-        flex-direction: column;
-        width: 90%;
-        gap: 10px;
-    }
-
-    .card {
-        padding: 10px;
-        margin: 10px;
-        width: 200px;
-    }
-
-    main {
-        padding: 5px;
-    }
-  } 
-
-.card {
-    background-color: #FFFFFF;
-    color: #34675C;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.card img {
-    margin: 10px auto;
-    width: 150px;
-    height: 150px;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card h2 {
-    color: #34675C;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.card a {
-    color: #34675C;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/*****FIN DE LAS CARDS MAIN ANTONIO*****/
-
-
+/***** FIN DEL CONTENEDOR CONSULTA Y MAPA*****/
 
 /*****FOOTER FABIAN*****/
 
 .pie-pagina{
     width: 100%;
     bottom: 0;
-    background-color: #324851;
+    background-color: #324851;  
 }
 
 .pie-pagina .grupo-1{
@@ -409,8 +431,7 @@ main {
 }
 
 .pie-pagina .grupo-1 .box figure img{
-    width: 250px;
-    border-radius: 50%;
+    width: 200px;
 }
 
 
