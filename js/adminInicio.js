@@ -1,3 +1,11 @@
+
+//LIBRERIA PARA LAS ANIMACIONES
+AOS.init({
+    duration: 1300,
+    once: true,
+    offset: 300,
+  });
+
 // SIRVE PARA QUE AL HACER SCCROLL EL NAVBAR SE MUESTRE CON OTRO BACKGROUND-COLOR PORQUE TIENE EL FIXED-TOP DE BOOTSTRAP
 window.addEventListener('scroll', function() {
   let navbar = document.getElementById('navbar');
@@ -36,4 +44,6 @@ Swal.fire({
     imageAlt: "Imagen de envio de consulta confirmada"
   });
 });
+
+
 
