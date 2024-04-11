@@ -29,12 +29,11 @@
 
 .navbar-toggler {
     border: 1px solid rgb(129, 126, 126);
-    background-color: rgba(128, 128, 128, 0.7);
+    background-color: #324851e1;
 }
 
 .navbar-toggler-icon {
     filter: invert();
-    
 }
 
 .offcanvas {
@@ -87,22 +86,9 @@
 .contenedorImagen {
     background-image: url(/img/bg1.jpeg);
     background-size: cover;
-    height: 45vh;
+    height: 50vh;
     position: relative;
 }
-
-@media screen and (min-width: 768px) {
-    .contenedorImagen {
-        height: 60vh;
-    }
-}  
-
-@media screen and (min-width: 1024px) {
-    .contenedorImagen {
-        height: 95vh;
-        background-position: top;
-    } 
-}  
 
 .contenedorImagen::after {
     content: '';
@@ -111,41 +97,70 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .tituloImagen {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
-    width: 30%; 
     transform: translateX(-50%);
     text-align: center;
     z-index: 1000;
-    background-color: #324851d1; 
-    padding: 10px 20px; 
+    background-color: #324851bc; 
+    padding: 10px; 
     border-radius: 30px;
     color: white;
+    width: 90%; 
+    max-width: 450px; 
 }
 
 .tituloImagen h1 {
-    font-size: 35px;
+    font-size: 20px;
     font-weight: bold;
-    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1.5s; /* don't forget to set a duration! */
 }
 
 .tituloImagen span {
     display: block;
-    animation: slideInRight; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1.5s; /* don't forget to set a duration! */
+    font-size: 12px;
 }
 
 .tituloImagen button {
-    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1.5s; /* don't forget to set a duration! */
     margin-top: 10px;
 }
+
+@media screen and (min-width: 768px) {
+    .contenedorImagen {
+        height: 60vh;
+    }
+
+    .tituloImagen h1 {
+        font-size: 24px;
+    }
+    
+    .tituloImagen span {
+        font-size: 16px;
+    }
+}  
+
+@media screen and (min-width: 1024px) {
+    .contenedorImagen {
+        height: 95vh;
+        background-position: top;
+    } 
+
+    .tituloImagen {
+        max-width: 550px; 
+    }
+
+    .tituloImagen h1 {
+        font-size: 28px;
+    }
+
+    .tituloImagen span {
+        font-size: 20px;
+    }
+}  
 
 /*****FIN HEADER*****/
 
@@ -191,7 +206,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    gap: 50px;
+    gap: 30px;
 }
 
 .cards {
@@ -199,8 +214,29 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 30px;
+    gap: 40px;
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+    animation-timing-function: ease;
 }
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: -500px 0px;
+        scale: .5;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+
+
 
 @media screen and (max-width: 768px) {
     .cards {
@@ -218,7 +254,26 @@ main {
     main {
         padding: 5px;
     }
-  } 
+} 
+
+.contenedorServicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.contenedorServicios h1 {
+    color: #022320;
+}
+
+.separador {
+    height: 1px;
+    width: 165px;
+    background-color: #324851bb;
+}
 
 .card {
     background-color: #FFFFFF;
@@ -282,7 +337,7 @@ main {
     left: 0; 
     width: 100%; 
     height: 100%; 
-    background-color: rgba(0, 0, 0, 0.274); 
+    background-color: rgba(0, 0, 0, 0.3); 
     z-index: 1; 
 }
 
