@@ -41,7 +41,7 @@
 }
 
 .offcanvas-header {
-    background-color: #324851e7;
+    background-color: #324851;
     color: white;
 }
 
@@ -107,7 +107,7 @@
     transform: translateX(-50%);
     text-align: center;
     z-index: 1000;
-    background-color: #324851bc; 
+    background-color: #1b323bc8; 
     padding: 10px; 
     border-radius: 30px;
     color: white;
@@ -215,7 +215,7 @@ main {
     align-items: center;
     width: 100%;
     gap: 40px;
-    padding: 80px 0;
+    padding: 30px 0;
 }
 
 
@@ -379,6 +379,49 @@ main {
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+#formConsulta input:focus,
+#formConsulta textarea:focus{
+    border: 2px solid #0075FF;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+/**COMIENZO VALIDACION**/
+
+.grupoNombre, .grupoApellido, .grupoCorreo{
+    position: relative;
+}
+
+.validacionErrorNombre, .validacionErrorApellido, .validacionErrorCorreo{
+    position: absolute;
+	right: 10px;
+	bottom: 56px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+    color: red;
+}
+
+.validacionBienNombre, .validacionBienApellido, .validacionBienCorreo{
+    position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+    color: green;
+}
+
+.mensajeErrorNombre, .mensajeErrorApellido, .mensajeErrorCorreo{
+    margin: 0;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+
+
+/**VALIDACION FIN**/
 
 #formConsulta label {
     font-weight: bold;
@@ -389,6 +432,7 @@ main {
     padding: 15px;
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
+
 
 @media screen and (max-width: 1024px) {
     .contenedorConsultaMapa {
@@ -474,7 +518,7 @@ main {
 
 
 .pie-pagina .grupo-1 .box h2{
-    color: #86ac41;
+    color: #9bca42;
     margin-bottom: 25px;
     font-size: 30px;
     text-align: center;

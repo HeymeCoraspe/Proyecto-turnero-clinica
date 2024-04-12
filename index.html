@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/logoclinica.ico" type="image/x-icon">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="headerPrincipal">
@@ -29,7 +28,7 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-fill"></i> Inicio</a>
+                      <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-fill"></i> Inicio</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="pages/nosotros.html"><i class="bi bi-people-fill"></i> Nosotros</a>
@@ -67,7 +66,7 @@
           <div class="tituloImagen">
               <h1>Cuidamos tu salud</h1>
               <span class="descripcionImagen">Realiza tus chequeos y estudios en Clinica Dr. Chapatin</span>
-              <button class="btn btn-success">Ver especialidades</button>
+              <button class="btn btn-success" onclick="error404()">Ver especialidades</button>
            </div>
         </div>
     </header>
@@ -80,12 +79,12 @@
         ><i class="bi bi-whatsapp"></i
       ></a></div>
       <!--FIN CONTENEDOR WHATSAPP FLOTANTE-->
-      <div class="contenedorServicios" data-aos="zoom-out-right">
+      <div class="contenedorServicios">
         <h1>Servicios Medicos</h1>
         <div class="separador"></div>
         <span>Brindamos el mejor servicio para su salud</span>
       </div>
-      <div class="cards" data-aos="zoom-out-right">
+      <div class="cards">
           <div class="card">
               <img src="https://conceptodefinicion.de/wp-content/uploads/2017/12/Obra_Social2.jpg" alt="Obra Social" width="200" height="150">
               <h2>Obra Sociales</h2>
@@ -105,26 +104,36 @@
               <a href="/pages/error404.html">Leer más</a>
           </div>
       </div>
-      <div class="contenedorConsultaMapa" data-aos="fade-left">
+      <div class="contenedorConsultaMapa">
           <div class="contenedorConsulta">
             <h2>Dejanos tu consulta</h2>
             <form id="formConsulta">
-              <div>
-                  <label for="nombre">Nombre:</label>
+              <div class="grupoNombre" id="grupoNombre">
+                  <label class="labelNombre" for="nombre">Nombre:</label>
                   <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                  <i class="validacionErrorNombre fas fa-times-circle"></i>
+                  <i class="validacionBienNombre fa-solid fa-circle-check"></i>
+                  <p class="mensajeErrorNombre">El nombre tiene que ser de 3 a 20 digitos y solo puede contener letras.</p>
               </div>
-              <div>
+          
+              <div class="grupoApellido" id="grupoApellido">
                   <label for="apellido">Apellido:</label>
                   <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                  <i class="validacionErrorApellido fas fa-times-circle"></i>
+                  <i class="validacionBienApellido fa-solid fa-circle-check"></i>
+                  <p class="mensajeErrorApellido">El apellido tiene que ser de 3 a 20 digitos y solo puede contener letras.</p>
               </div>
-              <div>
+              <div class="grupoCorreo" id="grupoCorreo">
                   <label for="correo">Correo:</label>
-                  <input type="email" id="correo" name="correo" placeholder="correo@example.com" required>
+                  <input type="email" id="correo" name="correo" placeholder="juancito@gmail.com" required>
+                  <i class="validacionErrorCorreo fas fa-times-circle"></i>
+                  <i class="validacionBienCorreo fa-solid fa-circle-check"></i>
+                  <p class="mensajeErrorCorreo">El correo electrónico debe incluir un ‘@’ y un dominio válido (como ‘.com’, ‘.net’, etc.)</p>
               </div>
               <div>
                   <label for="consulta">Consulta:</label>
                   <textarea id="consulta" name="consulta" placeholder="Escribe aquí tu consulta" required></textarea>
-              </div>   
+              </div> 
               <button class="btn btn-success" type="submit">Enviar Consulta</button>
             </form>          
           </div>
@@ -191,7 +200,6 @@
     </div>
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/adminInicio.js"></script>
     <script src="https://kit.fontawesome.com/fdc6849b60.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
