@@ -12,6 +12,10 @@
     padding: 5px;
 }
 
+.active {
+    color: rgb(130, 175, 45) !important;
+}
+
 .navbar.scrolled {
     background-color: #324851 !important; 
 }
@@ -206,7 +210,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    gap: 30px;
+    gap: 20px;
 }
 
 .cards {
@@ -244,18 +248,26 @@ main {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .contenedorServicios h1 {
     color: #022320;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.contenedorServicios span {
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(92, 91, 91, 0.705);
 }
 
 .separador {
     height: 1px;
     width: 165px;
     background-color: #324851bb;
-    margin: 5px 0 20px;
+    margin: 5px 0 10px;
 }
 
 .card {
@@ -263,7 +275,8 @@ main {
     color: #34675C;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.055);
+    box-shadow: 0 12px 24px 1px #d4e0ec;
     width: 300px;
     text-align: center;
     transition: transform 0.3s ease;
