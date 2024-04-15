@@ -5,14 +5,23 @@
 }
 
 .navbar {
-  background-color: #324851e7 !important;
-  box-shadow: 0 8px 12px #32485183 !important; 
+  background-color: #324851 !important; 
+  transition: background-color 0.3s ease !important; 
+  padding: 5px;
   position: relative;
-  top: 0;
+}
+
+.active {
+  color: rgb(130, 175, 45) !important;
+}
+
+.navbar.scrolled {
+  background-color: #324851 !important; 
 }
 
 .logo-clinica {
-  width: 150px;
+  width: 160px;   
+  filter: contrast(600%);
 }
 
 .logo-clinica:hover {
@@ -23,19 +32,25 @@
 
 .navbar-toggler {
   border: 1px solid rgb(129, 126, 126);
+  background-color: #324851e1;
 }
 
 .navbar-toggler-icon {
   filter: invert();
 }
 
+.offcanvas {
+  width: 350px !important;
+}
+
 .offcanvas-header {
-  background-color: #324851e7;
+  background-color: #324851;
   color: white;
 }
 
 .navbar-nav {
   gap: 20px;
+  font-size: 20px;
 }
 
 .nav-item {
@@ -48,16 +63,28 @@
   }
 
   .nav-link {
-      color: white !important;
+      color: rgb(255, 255, 255) !important;
+      font-weight: bold;
+      font-size: 15px;
+      text-transform: uppercase;
   }
 
   .nav-link:hover {
-      color: rgba(0, 0, 0, 0.7) !important;
+      color: greenyellow !important;
       transition: all 0.5s ease !important;
       cursor: pointer;
   }
-  
-} 
+
+  .navbar-nav {
+      font-size: 16px;
+  }
+
+  .dropdown-menu {
+      background-color: #324851 !important;
+      width: 170px;
+  }
+
+}  
 
 .contenedorRegistroMedico { 
   width: 90%;
@@ -81,11 +108,31 @@
   border-radius: 30px;
   color: white;
 }
+
+.contenedorInputsReg {
+  position: relative;
+}
+
+.requiredIcon {
+  position: absolute;
+  top: 30px;
+  right: -13px;
+  color: grey;
+  font-size: 25px;
+}
   
 #registroMedico, #registroPaciente{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
+}
+
+#registroMedico input:focus,
+#registroMedico textarea:focus,
+#registroMedico select:focus{
+    border: 2px solid #0075FF;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
 label {
@@ -96,7 +143,8 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="password"] {
+input[type="password"],
+select {
   width: 100%;
   padding: 8px;
   font-size: 16px;
@@ -113,3 +161,175 @@ input[type="password"] {
   width: 100%;
   gap: 30px;
 }
+
+/*VALIDACION FORM REGISTRO*/
+
+.validacionErrorNombre, 
+.validacionErrorApellido, 
+.validacionErrorCorreo, 
+.validacionErrorTel, 
+.validacionErrorUsuario,
+.validacionErrorContra{
+  position: absolute;
+  right: 10px;
+  bottom: 49px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+  color: red;
+}
+
+.validacionBienNombre, 
+.validacionBienApellido, 
+.validacionBienCorreo, 
+.validacionBienTel, 
+.validacionBienEsp,
+.validacionBienUsuario,
+.validacionBienContra{
+  position: absolute;
+  right: 10px;
+  bottom: 13px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+  color: green;
+}
+
+.mensajeErrorNombre, 
+.mensajeErrorApellido, 
+.mensajeErrorCorreo, 
+.mensajeErrorTel, 
+.mensajeErrorUsuario,
+.mensajeErrorContra{
+  margin: 0;
+  font-size: 12px;
+  color: red;
+  display: none;
+}
+
+  /*****FOOTER FABIAN*****/
+
+  .pie-pagina{
+    width: 100%;
+    bottom: 0;
+    background-color: #324851;  
+  }
+  
+  .pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 100px 0px;
+  }
+  
+  .pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+  
+  .pie-pagina .grupo-1 .box figure img{
+    width: 200px;
+  }
+  
+  
+  .pie-pagina .grupo-1 .box h2{
+    color: #9bca42;
+    margin-bottom: 25px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .pie-pagina .grupo-1 .box p{
+    color: white;
+    margin-bottom: 10px;
+    text-align:left;
+  }
+  
+  .pie-pagina .grupo-1 .box{
+    color: white;
+  }
+  
+  .pie-pagina .grupo-1 .box a{
+    text-decoration: none;
+    color: white;
+    transition: all 300ms ease;
+  }
+  
+  .pie-pagina .grupo-1 .box a:hover{
+    color: #86ac41;
+  }
+  
+  .pie-pagina .grupo-1 .redsocial a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    transition: all 300ms ease;
+  }
+  
+  /*sirve para que al pasar el cursor sobre los iconos de la red social se muestren de color*/
+  .pie-pagina .grupo-1 .redsocial a:hover{
+    color: #86ac41;
+  }
+  
+  /*sirve para poner color de fondo, separar del margen, centrar el texto, y poner color a las letras, de la ultima parte del footer*/
+  .pie-pagina .grupo-2{
+    background-color: #7da3a1;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  /*sirve para aumentar el tamaño de las ultimas letras*/
+  .pie-pagina .grupo-2 small{
+    font-size: 15px;
+  }
+  
+  /*sirve para poner las 4 columnas del footer*/
+  @media only screen and (min-width:1200px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+  }
+  
+  @media only screen and (max-width:1080px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+  }
+  
+  /*sirve para poner las 2 columnas del footer*/
+  @media only screen and (max-width:900px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+  }
+  
+  /*sirve para poner las 1 columnas del footer*/
+  @media only screen and (max-width:600px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+  }
+  
+  /*****FIN DEL FOOTER FABIAN*****/

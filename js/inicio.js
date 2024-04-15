@@ -28,7 +28,7 @@ const error404 = () => {
 //LLAMO A LA CONSULTA PARA USAR SWALLFIRE
 const formConsulta = document.getElementById('formConsulta');
 
-//EXPRESION REGULAR SACADA DE COPILOT
+//EXPRESION REGULAR 
 const regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,20}$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
