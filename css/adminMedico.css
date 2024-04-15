@@ -84,6 +84,11 @@
         background-color: #324851 !important;
         width: 170px;
     }
+
+    .logout {
+      position: absolute;
+      right: 50px;
+    }
   
   }  
   

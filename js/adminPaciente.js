@@ -1,10 +1,25 @@
-// Obteniendo el nombre de usuario del médico que ha iniciado sesión
+// SE OBTIENE EL NOMBRE DE USUARIO DEL PACIENTE QUE INCIO SESION
 const usuarioPaciente = localStorage.getItem('usuarioPaciente');
 
-// Obteniendo la lista de médicos del localStorage
+window.onload = function() {
+  
+  if (!usuarioPaciente) {
+    // Si el usuario no está autenticado, redirige a la página de inicio de sesión
+    window.location.href = '/pages/inicioPaciente.html';
+  }
+
+  // Cuando el usuario cierra sesión
+  document.getElementById('logout').addEventListener('click', function() {
+    // Elimina los datos del usuario de localStorage
+    localStorage.removeItem('usuarioPaciente');
+  });
+}
+
+
+// OBTENER LOS MEDICOS 
 const pacientes = JSON.parse(localStorage.getItem('pacientes')) || [];
 
-// Buscando al médico que ha iniciado sesión
+// BUSCANDO QUE PACIENTE INICIO SESION MEDIANTE USUARIO
 const paciente = pacientes.find(m => m.usuarioPaciente === usuarioPaciente);
 
 const displayPacienteInfo = (paciente) => {
@@ -51,42 +66,52 @@ form.addEventListener('submit', function(event) {
   const existeTurno = turnos.some(t => t.fechaTurno === turno.fechaTurno && t.hora === turno.hora && (t.usuarioMedico === turno.usuarioMedico || t.correoPaciente === turno.correoPaciente));
 
   if (existeTurno) {
-    alert('Ya existe un turno en la misma fecha y hora para el médico o paciente.');
+    // SI EL MEDICO NO EXISTE, MUESTRA UN MENSAJE DE ERROR
+    Swal.fire({
+      title: "No puedes crear el turno.",
+      text: "Ya existe un turno en la misma fecha y hora para el médico o paciente.",
+      imageUrl: "/img/error.png",
+      imageWidth: 212,
+      imageHeight: 212,
+      imageAlt: "Imagen de error"});
   } else {
     turnos.push(turno);
     localStorage.setItem('turnos', JSON.stringify(turnos));
 
-    alert('Turno creado correctamente.');
-
-    // RECARGO LA PÁGINA
-    location.reload();
+    Swal.fire({
+      title: "Listo!",
+      text: "Su turno fue creado con exito.",
+      imageUrl: "/img/success.png",
+      imageWidth: 212,
+      imageHeight: 212,
+      imageAlt: "Imagen de envio de consulta confirmada"
+    }).then(() => {
+      // RECARGO LA PÁGINA INMEDIATAMENTE
+      location.reload();
+    });
+  
+    // RECARGO LA PÁGINA DESPUÉS DE 3000ms
+    setTimeout(function(){ 
+      location.reload(); 
+    }, 3000);
   }
 });
 
-// OBTENGO EL INPUT DE FECHA
+// OBTENGO EL INPUT DE FECHA - PARA PONER FECHA MINIMA EN LOS INPUT FECHA DEL CREAR TURNO
 const fechaInput = document.getElementById('fechaTurno');
-
-// OBTENGO LA FECHA ACTUAL
 const hoy = new Date();
-
-// FORMATEO LA FECHA AL FORMATO CORRECTO
 const fechaMinima = hoy.toISOString().split('T')[0];
-
-// ESTABLEZCO LA FECHA MINIMA DEL INPUT
 fechaInput.min = fechaMinima;
 
-// OBTENGO LOS SELECTS
+// OBTENGO LOS SELECT
 const selectEspecialidad = document.getElementById('especialidad');
 const selectMedico = document.getElementById('doctor');
 
-// OBTENGO LA LISTA DE MÉDICOS DEL STORAGE
 const medicos = JSON.parse(localStorage.getItem('medicos')) || [];
-
-// OBTENGO LAS ESPECIALIDADES DE LOS MÉDICOS
 const especialidades = [...new Set(medicos.map(medico => medico.especialidad))];
 
 // LLENO EL SELECT DE ESPECIALIDADES
-especialidades.forEach(especialidad => {
+  especialidades.forEach(especialidad => {
   selectEspecialidad.innerHTML += `<option value="${especialidad}">${especialidad}</option>`;
 });
 
@@ -98,18 +123,16 @@ medicos.forEach(medico => {
 selectEspecialidad.addEventListener('change', function() {
   // LIMPIO EL SELECT DE MÉDICOS
   selectMedico.innerHTML = '';
-
-  // OBTENGO LA ESPECIALIDAD SELECCIONADA
   const especialidadSeleccionada = this.value;
 
-  // FILTRO LOS MÉDICOS QUE TENGAN LA ESPECIALIDAD SELECCIONADA
+  // FILTRO LOS DOCS QUE TENGAN LA ESPECIALIDAD SELECCIONADA
   const medicosFiltrados = medicos.filter(medico => medico.especialidad === especialidadSeleccionada);
 
-  // SI NO HAY MÉDICOS, MUESTRO UN MENSAJE
+  // SI NO HAY DOCS MUESTRO UN MENSAJE
   if (medicosFiltrados.length === 0) {
     selectMedico.innerHTML = '<option>No hay médicos para esta especialidad</option>';
   } else {
-    // SI HAY MÉDICOS, LOS AGREGO AL SELECT
+    // SI HAY DOCS LOS AGREGO AL SELECT
     medicosFiltrados.forEach(medico => {
       selectMedico.innerHTML += `<option value="${medico.usuarioMedico}">${medico.nombre} ${medico.apellido}</option>`;
     });
@@ -117,13 +140,10 @@ selectEspecialidad.addEventListener('change', function() {
 });
 
 selectMedico.addEventListener('change', function() {
-  // OBTENGO EL MÉDICO SELECCIONADO
+  // OBTENGO EL MEDICO SELECCIONADO
   const medicoSeleccionado = medicos.find(medico => medico.usuarioMedico === this.value);
-
-  // ESTABLEZCO LA ESPECIALIDAD DEL MÉDICO COMO EL VALOR DEL SELECT DE ESPECIALIDADES
   selectEspecialidad.value = medicoSeleccionado.especialidad;
 });
-
 
 
 // PARA VER TURNO
@@ -133,11 +153,7 @@ const verTurnos = (usuario) => {
 
   // FILTRO LOS TURNOS QUE CORRESPONDAN AL USUARIO
   const turnosUsuario = turnos.filter(turno => turno.usuarioMedico === usuario || turno.correoPaciente === usuario);
-
-  // OBTENGO EL ELEMENTO DONDE VOY A AGREGAR LOS TURNOS
   const tablaTurnos = document.getElementById('turnosBody');
-
-  // LIMPIO LA TABLA
   tablaTurnos.innerHTML = '';
 
   // SI NO HAY TURNOS, MUESTRO UN MENSAJE
@@ -146,7 +162,7 @@ const verTurnos = (usuario) => {
   } else {
     // SI HAY TURNOS, LOS AGREGO A LA TABLA
     turnosUsuario.forEach(turno => {
-    // BUSCO AL MEDICO QUE CORRESPONDA AL TURNO
+    // BUSCO AL MEDICO QUE CORRESPOPONDA AL TURNO
     const medico = medicos.find(m => m.usuarioMedico === turno.usuarioMedico);
     const nombreMedico = medico ? `${medico.nombre} ${medico.apellido}` : 'Médico no encontrado';
       tablaTurnos.innerHTML += `<tr>

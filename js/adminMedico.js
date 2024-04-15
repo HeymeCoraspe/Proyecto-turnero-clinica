@@ -1,10 +1,25 @@
 // Obteniendo el nombre de usuario del médico que ha iniciado sesión
 const usuarioMedico = localStorage.getItem('usuarioMedico');
 
-// Obteniendo la lista de médicos del localStorage
-const medicos = JSON.parse(localStorage.getItem('medicos')) || [];
+// En tu archivo adminMedico.js
+window.onload = function() {
+  
+  if (!usuarioMedico) {
+    // Si el usuario no está autenticado, redirige a la página de inicio de sesión
+    window.location.href = '/pages/inicioMedico.html';
+  }
 
-// Buscando al médico que ha iniciado sesión
+  // Cuando el usuario cierra sesión
+  document.getElementById('logout').addEventListener('click', function() {
+    // Elimina los datos del usuario de localStorage
+    localStorage.removeItem('usuarioMedico');
+  });
+}
+
+
+
+const medicos = JSON.parse(localStorage.getItem('medicos')) || [];
+// BUSCAR MEDICO QUE INICIO SESION
 const medico = medicos.find(m => m.usuarioMedico === usuarioMedico);
 
 const displayDoctorInfo = (medico) => {
@@ -17,7 +32,7 @@ const displayDoctorInfo = (medico) => {
   `;
 };
 
-// Mostrando la información del médico
+// SIRVE PARA MOSTRAR LA INFO DEL DOC
 if (medico) {
   displayDoctorInfo(medico);
 } else {
@@ -30,20 +45,16 @@ if (medico) {
 const verTurnos = () => {
   // OBTENGO EL NOMBRE DE USUARIO DEL MÉDICO QUE HA INICIADO SESIÓN
   const usuarioMedico = localStorage.getItem('usuarioMedico');
-
-  // OBTENGO LA LISTA DE TURNOS DEL STORAGE
   const turnos = JSON.parse(localStorage.getItem('turnos')) || [];
 
   // OBTENGO LA LISTA DE PACIENTES DEL STORAGE
   const pacientes = JSON.parse(localStorage.getItem('pacientes')) || [];
 
-  // FILTRO LOS TURNOS QUE CORRESPONDAN AL MÉDICO
+  // FILTRAR TURNOS QUE CORRESPONDAN AL MEDICO
   const turnosMedico = turnos.filter(turno => turno.usuarioMedico === usuarioMedico);
 
   // OBTENGO EL ELEMENTO DONDE VOY A AGREGAR LOS TURNOS
   const tablaTurnos = document.getElementById('turnosBody');
-
-  // LIMPIO LA TABLA
   tablaTurnos.innerHTML = '';
 
   // SI NO HAY TURNOS, MUESTRO UN MENSAJE
