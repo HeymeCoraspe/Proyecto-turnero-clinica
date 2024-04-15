@@ -1,22 +1,30 @@
-// OBTENER EL FORMULARIO
-const registroPaciente = document.getElementById('loginPaciente');
-registroPaciente.addEventListener('submit', function(event) {
-event.preventDefault(); 
+const inicioPaciente = document.getElementById('inicioPaciente');
+inicioPaciente.addEventListener('submit', function(event) {
+  event.preventDefault(); 
 
-// USUARIO Y CONTRASEÑA
-const usuarioPaciente = registroPaciente.elements['usuario'].value;
-const contraseñaPaciente = registroPaciente.elements['contraseña'].value;
+  const usuarioPaciente = inicioPaciente.elements['usuarioPaciente'].value;
+  const contraseñaPaciente = inicioPaciente.elements['contraseñaPaciente'].value;
 
-// LOCALSTORAGE
-const storedUsuario = localStorage.getItem('usuarioPaciente');
-const storedContraseña = localStorage.getItem('contraseñaPaciente');
-//CONIDCIONES
-if (usuarioPaciente === storedUsuario && contraseñaPaciente === storedContraseña) {
-  alert('Inicio de sesión exitoso');
-  window.location.href = 'adminPaciente.html'; 
-} else {
-  alert('Usuario o contraseña incorrectos');
-}
+  // SE OBTIENEN LOS DATOS ALMACENADOS EN EL LOCALSTORAGE
+  let pacientes = JSON.parse(localStorage.getItem('pacientes')) || [];
+
+  // BUSCAR EL MEDICO EN LA LISTA DE MEDICOS
+  const paciente = pacientes.find(m => m.usuarioPaciente === usuarioPaciente && m.contraseñaPaciente === contraseñaPaciente);
+
+  if (paciente) {
+    // SI EL MEDICO EXISTE, INICIA SESION
+    localStorage.setItem('usuarioPaciente', usuarioPaciente);
+    window.location.href = 'adminPaciente.html';
+  } else {
+    // SI EL MEDICO NO EXISTE, MUESTRA UN MENSAJE DE ERROR
+    Swal.fire({
+      title: "No puede iniciar sesión.",
+      text: "Usuario o contraseña incorrectos.",
+      imageUrl: "/img/error.png",
+      imageWidth: 212,
+      imageHeight: 212,
+      imageAlt: "Imagen de error"});
+  }
 });
   
 //BOTONES

@@ -99,8 +99,8 @@ validarInput(
 registroMedico.addEventListener('submit', function(event) {
 event.preventDefault();
 
-// Creando un objeto con los datos del usuario
-let usuario = {
+// Creando un objeto con los datos del medico
+const medico = {
   nombre: registroMedico.elements['nombre'].value,
   apellido: registroMedico.elements['apellido'].value,
   correo: registroMedico.elements['correo'].value,
@@ -110,94 +110,70 @@ let usuario = {
   contraseñaMedico: registroMedico.elements['contraseñaMedico'].value
 };
 
-// Llamando a la función registrarUsuario
-registrarUsuario(usuario);
+registrarMedico(medico);
+});
 
-// Obteniendo la lista de usuarios del localStorage
-let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+const registrarMedico = (medico) => {
+  // OBTIENE LISTA DE MEDICOS
+  let medicos = JSON.parse(localStorage.getItem('medicos')) || [];
 
-// Añadiendo el nuevo usuario a la lista
-usuarios.push(usuario);
+  // VERIFICAR EL MEDICO MEDIANTE EL CORREO Y EL NOMBRE DE USUARIO
+  const existeMedico = medicos.some(m => m.correo === medico.correo || m.usuarioMedico === medico.usuarioMedico);
 
-// Guardando la lista actualizada de usuarios en el localStorage
-localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-
-function registrarUsuario(usuario) {
-  // Obtén la lista de usuarios del localStorage
-  let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-  // Verifica si el usuario ya existe
-  let existeCorreo = usuarios.some(u => u.correo === usuario.correo);
-
-  if (existeCorreo) {
-    // Si el correo ya existe, muestra un mensaje de error
-    alert('El usuario ya ha sido creado.');
+  if (existeMedico) {
+    // MOSTRANDO EL MENSAJE DE ALERTA CON SWEETALERT SI ES QUE EXISTE EL MEDICO
+    Swal.fire({
+      title: "Uups! Tenemos un problema",
+      text: "El medico ya ha sido creado con este correo o nombre de usuario.",
+      imageUrl: "/img/error.png",
+      imageWidth: 212,
+      imageHeight: 212,
+      imageAlt: "Imagen de error"});
   } else {
-    // Si el correo no existe, añádelo a la lista y guárdala en el localStorage
-    usuarios.push(usuario);
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    // Si el correo y el nombre de usuario no existen, añádelo a la lista y guárdala en el localStorage
+    medicos.push(medico);
+    localStorage.setItem('medicos', JSON.stringify(medicos));
+    // MOSTRANDO EL MENSAJE DE ALERTA CON SWEETALERT
+    Swal.fire({
+      title: "Registro exitoso!",
+      text: "Será redireccionado a la pagina de inicio de sesión.",
+      imageUrl: "/img/success.png",
+      imageWidth: 212,
+      imageHeight: 212,
+      imageAlt: "Imagen de envio de registro confirmado"});
+      
+  // LIMPIA LA CONSULTA UNA VEZ ENVIADA
+    registroMedico.reset();
+  
+  // LIMPIA EL BORDE Y LOS ICONOS QUE QUEDABAN FIJOS CUANDO MANDABA LA CONSULTA
+  const inputs = registroMedico.querySelectorAll('input');
+  const selects = registroMedico.querySelectorAll('select');
+  const iconosError = registroMedico.querySelectorAll('.validacionErrorNombre, .validacionErrorApellido, .validacionErrorCorreo, .validacionErrorTel, .validacionErrorUsuario, .validacionErrorContra');
+  const iconosBien = registroMedico.querySelectorAll('.validacionBienNombre, .validacionBienApellido, .validacionBienCorreo, .validacionBienTel, .validacionBienEsp, .validacionBienUsuario, .validacionBienContra');
+  
+  inputs.forEach(input => {
+    input.style.borderColor = '';
+  });
+  
+  selects.forEach(select => {
+    select.style.borderColor = '';
+  });
+  
+  
+  iconosError.forEach(icono => {
+    icono.style.opacity = '0';
+  });
+  
+  iconosBien.forEach(icono => {
+    icono.style.opacity = '0';
+  });
+  
+  setTimeout(function() {
+    window.location.href = '/pages/inicioMedico.html';
+  }, 3000);
+  
   }
 }
-
-// const nombre = registroMedico.elements['nombre'].value;
-// const apellido = registroMedico.elements['apellido'].value;
-// const correo = registroMedico.elements['correo'].value;
-// const telefono = registroMedico.elements['telefono'].value;
-// const especialidad = registroMedico.elements['especialidad'].value;
-// const usuarioMedico = registroMedico.elements['usuarioMedico'].value;
-// const contraseñaMedico = registroMedico.elements['contraseñaMedico'].value;
-
-
-// // GUARDANDO DATOS DEL FORM
-// localStorage.setItem('nombre', nombre);
-// localStorage.setItem('apellido', apellido);
-// localStorage.setItem('correo', correo);
-// localStorage.setItem('telefono', telefono);
-// localStorage.setItem('especialidad', especialidad);
-// localStorage.setItem('usuarioMedico', usuarioMedico);
-// localStorage.setItem('contraseñaMedico', contraseñaMedico);
-
-// MOSTRANDO EL MENSAJE DE ALERTA CON SWEETALERT
-    Swal.fire({
-    title: "Registro exitoso!",
-    text: "Será redireccionado a la pagina de inicio de sesión.",
-    imageUrl: "/img/success.png",
-    imageWidth: 212,
-    imageHeight: 212,
-    imageAlt: "Imagen de envio de registro confirmado"});
-    
-// LIMPIA LA CONSULTA UNA VEZ ENVIADA
-  registroMedico.reset();
-
-// LIMPIA EL BORDE Y LOS ICONOS QUE QUEDABAN FIJOS CUANDO MANDABA LA CONSULTA
-const inputs = registroMedico.querySelectorAll('input');
-const selects = registroMedico.querySelectorAll('select');
-const iconosError = registroMedico.querySelectorAll('.validacionErrorNombre, .validacionErrorApellido, .validacionErrorCorreo, .validacionErrorTel, .validacionErrorUsuario, .validacionErrorContra');
-const iconosBien = registroMedico.querySelectorAll('.validacionBienNombre, .validacionBienApellido, .validacionBienCorreo, .validacionBienTel, .validacionBienEsp, .validacionBienUsuario, .validacionBienContra');
-
-inputs.forEach(input => {
-  input.style.borderColor = '';
-});
-
-selects.forEach(select => {
-  select.style.borderColor = '';
-});
-
-
-iconosError.forEach(icono => {
-  icono.style.opacity = '0';
-});
-
-iconosBien.forEach(icono => {
-  icono.style.opacity = '0';
-});
-
-setTimeout(function() {
-  window.location.href = '/pages/inicioMedico.html';
-}, 3000);
-
-});
 
 //BOTON VOLVER PARA INICIAR SESION
 const btnVolver = document.getElementById('btnVolver');
